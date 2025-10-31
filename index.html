@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid-MO ARC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #000055;
+            --secondary-color: #500000;
+            --accent-color: #d5a993;
+            --background-color: #f4f4f9;
+            --text-color: #333;
+            --card-bg-color: #ffffff;
+            --border-color: #ddd;
+            --header-bg-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        header {
+            background: var(--header-bg-color);
+            padding: 1rem;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        header img {
+            max-height: 80px;
+        }
+
+        .header-title {
+            flex-grow: 1;
+        }
+
+        .header-title h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .header-title h2 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        
+        .header-title p {
+            margin: 0.5rem 0 0 0;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .card {
+            background: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .card h2, .card h3 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .officers-list p, .board-list p {
+            margin: 0 0 1rem 0;
+        }
+
+        .event-announcement img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .morse-code-card {
+            background-color: #ffffdd;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .photo-gallery figure {
+            margin: 0;
+            text-align: center;
+        }
+
+        .photo-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .photo-gallery figcaption {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg-color);
+            border-top: 2px solid var(--border-color);
+            margin-top: 20px;
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-nav a {
+            font-weight: bold;
+        }
+
+        .important-notice {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+            }
+            .header-title {
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="http://mmccs.com/mmarc/arrl.jpg" alt="ARRL Logo">
+    <div class="header-title">
+        <h1>Mid-MO Amateur Radio Club (K&Oslash;ETY)</h1>
+        <p>Jefferson City, MO 65109</p>
+        <h2>VHF Repeater: 147.000 MHz, (-) 0.600 MHz offset, PL-Tone 127.3 Hz</h2>
+        <h2>UHF Repeater: 442.150 MHz, (+) 5.0 MHz offset, PL-Tone 127.3 Hz</h2>
+    </div>
+    <img src="http://mmccs.com/mmarc/mmarc.jpg" alt="MMARC Logo">
+</header>
+
+<div class="container">
+    <aside class="sidebar">
+        <section class="card">
+            <h2>MidMoARC Special Event Call Sign - N&Oslash;SS</h2>
+            <p>(In Memory of Tom Hammond)</p>
+            <p>Trustee: Kent Trimble, K9ZTV (<a href="mailto:k9ztv@socket.net">k9ztv@socket.net</a>)</p>
+        </section>
+
+        <section class="card">
+            <h2>Club Officers</h2>
+            <div class="officers-list">
+                <p><strong>President:</strong> Bryan Braunschweig, W&Oslash;ESE<br>(<a href="mailto:w0ese.mail@gmail.com">w&Oslash;ese.mail@gmail.com</a>)</p>
+                <p><strong>Vice-President:</strong> John Fisher, KD&Oslash;AVA<br>(<a href="mailto:johnptfisher@gmail.com">johnptfisher@gmail.com</a>)</p>
+                <p><strong>Sec/Tres:</strong> Tim Raymer (N&Oslash;UI)<br>(<a href="mailto:taraymer@embarqmail.com">taraymer@embarqmail.com</a>)</p>
+                <p><strong>Trustee:</strong> <a href="http://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=229490" target="_blank">Jim Biggerstaff (N&Oslash;TKN)</a><br>(<a href="mailto:jim.biggerstaff@gmail.com">jim.biggerstaff@gmail.com</a>)</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Tech Committee</h2>
+            <ul>
+                <li>Jim Biggerstaff (N&Oslash;TKN) - Chairman</li>
+                <li>Tim Raymer (N&Oslash;UI)</li>
+                <li>Jack Boswell (N&Oslash;KSF)</li>
+                <li>Dewayne Carver (WD&Oslash;HXX)</li>
+                <li>Jim Branson (N&Oslash;LBY)</li>
+                <li>Jack Rennick (W&Oslash;JDR)</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Board Members</h2>
+            <div class="board-list">
+                <p><strong>Tim Raymer (N&Oslash;UI)</strong><br>Immediate Past President<br><i>Term Ends December 2025</i></p>
+                <p><strong>Jim Biggerstaff, N&Oslash;TKN</strong><br><i>Term Ends December 2025</i></p>
+                <p><strong>Jim Branson, N&Oslash;LBY</strong><br><i>Term Ends December 2026</i></p>
+                <p><strong>Steve Hick, WW&Oslash;G</strong><br><i>Term Ends December 2027</i></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Managers & Coordinators</h2>
+            <ul>
+                <li><strong>Special Event Coordinator:</strong> Kent Trimble (K9ZTV)</li>
+                <li><strong>2 Meter Net Manager:</strong> Stephen Hick (WW&Oslash;G)</li>
+                <li><strong>VE Liaison:</strong> Mike Smith (AD&Oslash;YM)</li>
+                <li><strong>Cole County ARES Coordinator:</strong> Vacant</li>
+                <li><strong>Web Master:</strong> John S. Graves (<a href="mailto:kb0nxk@mmccs.com">kb&Oslash;nxk@mmccs.com</a>)</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Hammond Award Recipients</h2>
+            <p>Congratulations to the most recent recipient, Gary Zeilman, K&Oslash;WYN. <a href="http://www.mmccs.com/mmarc/hammond_award.html" target="_blank">Here</a> is a brief summary of The Hammond Award.</p>
+            <ul>
+                <li>2024 - Jack Boswell, N&Oslash;KSF</li>
+                <li>2022 - Gary Zeilman, K&Oslash;WYN</li>
+                <li>2018 - Jim Biggerstaff, N&Oslash;TKN</li>
+                <li>2017 - Bill Gerth, W4RK</li>
+                <li>2015 - Sheriff Greg White</li>
+                <li>2014 - Kent Trimble, K9ZTV</li>
+                <li>2014 - Michael Thayer, KM&Oslash;S</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Missouri Nets</h2>
+            <ul>
+                <li><strong>Callaway (KC&Oslash;MV):</strong> 8:45 PM, 147.315 MHz (+)</li>
+                <li><strong>Columbia (K&Oslash;SI):</strong> 9:00 PM, 146.760 MHz (-), 127.3 CTCSS</li>
+                <li><strong>Mexico (AA&Oslash;RC):</strong> Tue 8:00 PM, 147.255 MHz (+), 127.3 CTCSS</li>
+                <li><strong>Boonville (W&Oslash;BRC):</strong> Thu 8:30 PM, 147.360 MHz (+), 127.3 CTCSS</li>
+                <li><strong>MON:</strong> Daily 6:30 & 9:45 PM, 3.585 MHz</li>
+                <li><strong>MTN:</strong> Daily 5:30 PM, 3.963 MHz</li>
+                <li><strong>MESN:</strong> Sun 2:00 PM, 3.963/7.263 MHz</li>
+            </ul>
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="https://www.repeaterbook.com/repeaters/feature_search.php?state_id=29&type=SKYWARN" target="_blank">
+                    <img src="http://mmccs.com/mmarc/small_logo-ani.gif" border="0"><br>Skywarn Repeaters
+                </a>
+            </div>
+        </section>
+    </aside>
+
+    <main class="content">
+        <section class="card event-announcement">
+            <h2>W&Oslash;O Event Announcement - October 31, 2025</h2>
+            <img src="http://mmccs.com/mmarc/images/Herman_Munster_on_Ham_Radio.jpg" alt="Herman Munster on Ham Radio">
+            <p>W&Oslash;O will once again be haunting the ether on Halloween from Frankenstein, MO. Stop by and say hi to Igor, Vlad, Drac or whoever else might awake to tickle the ionosphere. CW and SSB will be in play. Bewitching hour starts around 1800 UTC October 31st continues until the bands die. Watch the spotting networks for current frequencies.</p>
+            <p>To receive this year's unique QSL card you must send contact info along with a No. 10 SASE (smaller envelopes will require the card to be folded). See QRZ.com for details.</p>
+            <p>73 and Happy Haunting,<br>Frank N. Stein</p>
+        </section>
+
+        <section class="card">
+            <h2>Club Resources</h2>
+            <ul>
+                <li><strong>Club Calendar:</strong> <a href="http://www.mmccs.com/mmarc/calendar/" target="_blank">Click here</a></li>
+                <li><strong>Club E-Mail:</strong> <a href="mailto:k0ety@arrl.net">k&Oslash;ety@arrl.net</a></li>
+                <li><strong>Current club by-laws:</strong> <a href="http://mmccs.com/mmarc/MMARC By-Laws 12-14-13.pdf" target="_blank">PDF</a> | <a href="http://mmccs.com/mmarc/MMARC By-Laws 12-14-13.doc">DOC</a></li>
+                <li><strong>Facebook Page:</strong> <a href="https://www.facebook.com/MidMOAmateurRadioClub/" target="_blank">Click here</a></li>
+                <li><strong>Membership Forms:</strong> <a href="http://mmccs.com/mmarc/MMARC_Membership_Form.doc">DOC</a> | <a href="http://mmccs.com/mmarc/MMARC_Membership_Form.pdf" target="_blank">PDF</a></li>
+                <li><strong>Area Hams:</strong> <a href="https://www.fccbulletin.com/mo/jefferson-city/ha" target="_blank">List By Call</a></li>
+                <li><strong>Groups.IO:</strong> <a href="https://groups.io/g/MMARC-JeffCity" target="_blank">Click here</a></li>
+            </ul>
+        </section>
+
+        <section class="card morse-code-card">
+            <h3>Morse Code Class & Breakfast Every Saturday</h3>
+            <p>8 a.m. Breakfast followed by Morse Code Class at 9 a.m. at SSM Health St. Mary's Hospital, 2505 Mission Drive, Jefferson City, MO. Enter through the Out-Patient Entrance, go down one floor to the cafeteria.</p>
+        </section>
+
+        <section class="card">
+            <h2>Operating Opportunities</h2>
+            <h3>MID-MO ARC NET</h3>
+            <p class="important-notice">Every Wednesday night at 8:00pm is the Mid-MO Amateur Radio Club Net on 147.00MHz (-600KHz, 127.3 PL) and 442.150 MHz (+5MHz, 127.3 PL). All radio operators are invited. Come join us on the air!</p>
+        </section>
+
+        <section class="card">
+            <h2>MMARC Meetings</h2>
+            <p>Meetings are held every month at 7 p.m. on the Second Thursday in the Training Room of the Cole County Sheriff's Office (350 E. High St, Jefferson City, MO 65101). <a href="http://mmccs.com/mmarc/Map_To_Cole_County_Sheriff_And_MMARC_Meeting.pdf" target="_blank">Map here</a>.</p>
+            <p class="important-notice">If you wish to take an Amateur Radio License Exam, please contact: Mike Smith (AD0YM) 573-635-8872 ad0ym@arrl.net. Advance arrangements are required.</p>
+        </section>
+        
+        <section class="card">
+            <h2>Meeting Photos</h2>
+            <div class="photo-gallery">
+                <figure>
+                    <img src="http://mmccs.com/mmarc/photos/2014_1.jpg" alt="Kent Trimble, K9ZTV">
+                    <figcaption>Jan Program: Magnetic Loop Antennas<br>Kent Trimble, K9ZTV</figcaption>
+                </figure>
+                <figure>
+                    <img src="http://mmccs.com/mmarc/photos/2014_2.jpg" alt="Bill Gerth, W4RK">
+                    <figcaption>Jan Program: Magnetic Loop Antennas<br>Bill Gerth, W4RK</figcaption>
+                </figure>
+                <figure>
+                    <img src="http://mmccs.com/mmarc/photos/2014_3.jpg" alt="Jack Boswell, N&Oslash;KSF">
+                    <figcaption>March: Builders' Night<br>Jack Boswell, N&Oslash;KSF</figcaption>
+                </figure>
+                <figure>
+                    <img src="http://mmccs.com/mmarc/photos/2014_4.jpg" alt="Mike Dolson, N&Oslash;ZH">
+                    <figcaption>March: Builders' Night<br>Mike Dolson, N&Oslash;ZH</figcaption>
+                </figure>
+                <figure>
+                    <img src="http://mmccs.com/mmarc/photos/2014_5.jpg" alt="Jim Biggerstaff, N0TKN">
+                    <figcaption>March: Builders' Night<br>Jim Biggerstaff, N0TKN</figcaption>
+                </figure>
+                <figure>
+                    <img src="http://mmccs.com/mmarc/photos/2014_6.jpg" alt="Steve Hick, WW0G">
+                    <figcaption>March: Builders' Night<br>Steve Hick, WW0G</figcaption>
+                </figure>
+                <figure>
+                    <img src="http://mmccs.com/mmarc/photos/2014_7.jpg" alt="Jack Boswell, N&Oslash;KSF">
+                    <figcaption>April: Meter Basics<br>Jack Boswell, N&Oslash;KSF</figcaption>
+                </figure>
+                <figure>
+                    <img src="http://mmccs.com/mmarc/photos/2014_8.jpg" alt="Jack Boswell, N&Oslash;KSF">
+                    <figcaption>April: Meter Basics<br>Jack Boswell, N&Oslash;KSF</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Tech/Builders Night</h2>
+            <p>The first Tuesday of the month 7:00 PM at the Cole County EMS Building 1736 Southridge Dr. Jefferson City, MO. Please come and enjoy the evening with us. If you have anything that you're working on bring it and share with the group.</p>
+        </section>
+    </main>
+</div>
+
+<footer>
+    <nav>
+        <ul class="footer-nav">
+            <li><a href="http://mmccs.com/mmarc/n0ss">N&Oslash;SS</a></li>
+            <li><a href="http://mmccs.com/mmarc/min.html">MMARC Minutes & Programs</a></li>
+            <li><a href="http://mmccs.com/mmarc/NetProcedures_Aug_15_2022.pdf" target="_blank">MMARC Net Procedure</a></li>
+            <li><a href="http://mmccs.com/mmarc/MMARC By-Laws 12-14-13.pdf" target="_blank">MMARC By-Laws</a></li>
+            <li><a href="http://mmccs.com/mmarc/newham.html">Getting Your Ham License</a></li>
+            <li><a href="http://www.arrl.org" target="_blank">ARRL</a></li>
+            <li><a href="http://www.fcc.gov" target="_blank">FCC</a></li>
+        </ul>
+    </nav>
+    <a href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!">
+        <img src="https://www.hamqsl.com/solar101vhfpic.php" alt="Solar-Terrestrial Data">
+    </a>
+</footer>
+
+</body>
+</html>
