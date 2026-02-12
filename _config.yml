@@ -1,0 +1,24 @@
+title: Mid-MO Amateur Radio Club
+email: k0ety@arrl.net
+description: >-
+  The official website of the Mid-MO Amateur Radio Club (K0ETY) in Jefferson City, MO.
+baseurl: ""
+url: ""
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+collections:
+  minutes:
+    output: true
+    permalink: /minutes/:year/:month/:title/
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

@@ -1,0 +1,28 @@
+<footer class="site-footer">
+    <div class="wrapper">
+        <div class="footer-col-wrapper">
+            <div class="footer-col footer-col-1">
+                <h2 class="footer-heading">{{ site.title | escape }}</h2>
+                <ul class="contact-list">
+                    <li>
+                        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-col-2">
+                <ul class="social-media-list">
+                    <li><a href="https://www.facebook.com/MidMOAmateurRadioClub/">Facebook</a></li>
+                    <li><a href="https://groups.io/g/MMARC-JeffCity">Groups.IO</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-col-3">
+                <p>{{ site.description | escape }}</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
