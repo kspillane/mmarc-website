@@ -1,11 +1,11 @@
 <header class="site-header" x-data="{ mobileMenuOpen: false }">
     <div class="wrapper">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-            <img src="{{ '/assets/images/arrl.jpg' | relative_url }}" alt="ARRL Logo" style="height: 60px;">
+        <div class="header-flex">
+            <img src="{{ '/assets/images/arrl.jpg' | relative_url }}" alt="ARRL Logo" class="header-logo">
             <a class="site-title" href="{{ '/' | relative_url }}">
                 {{ site.title | escape }}
             </a>
-            <img src="{{ '/assets/images/mmarc.jpg' | relative_url }}" alt="MMARC Logo" style="height: 60px;">
+            <img src="{{ '/assets/images/mmarc.jpg' | relative_url }}" alt="MMARC Logo" class="header-logo">
         </div>
 
         <nav class="site-nav">
@@ -17,12 +17,15 @@
             </button>
 
             <div class="trigger" :class="{ 'open': mobileMenuOpen }">
-                <a class="page-link" href="{{ '/' | relative_url }}">Home</a>
-                <a class="page-link" href="{{ '/about/' | relative_url }}">About</a>
-                <a class="page-link" href="{{ '/minutes/' | relative_url }}">Minutes</a>
-                <a class="page-link" href="{{ '/contact/' | relative_url }}">Contact</a>
-                <a class="page-link" href="{{ '/n0ss/' | relative_url }}" target="_blank">N0SS Archive</a>
-                <button class="theme-toggle" @click="$store.theme.toggle()" aria-label="Toggle dark mode">
+                <a class="contrast" href="{{ '/' | relative_url }}">Home</a>
+                <a class="contrast" href="{{ '/about/' | relative_url }}">About</a>
+                <a class="contrast" href="{{ '/minutes/' | relative_url }}">Minutes</a>
+                <a class="contrast" href="{{ '/contact/' | relative_url }}">Contact</a>
+                <a class="contrast" href="{{ '/n0ss/' | relative_url }}" target="_blank">N0SS Archive</a>
+                <!-- Pico.css automatically handles dark mode based on system prefs, 
+                     but we can keep the manual toggle if we want to override 'data-theme' 
+                -->
+                <button class="outline contrast" @click="$store.theme.toggle()">
                     <span x-show="$store.theme.current === 'light'">🌙</span>
                     <span x-show="$store.theme.current === 'dark'">☀️</span>
                 </button>
