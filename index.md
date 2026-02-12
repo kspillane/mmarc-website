@@ -64,40 +64,74 @@ title: Home
     </div>
   </div>
 
-  <!-- Missouri Nets -->
+  <!-- Area Nets -->
   <div class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg sm:col-span-2 lg:col-span-3">
     <div class="px-4 py-5 sm:p-6">
       <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Area Nets</h3>
-      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="text-sm text-gray-500 dark:text-gray-300">
-              <p class="font-semibold text-gray-900 dark:text-white">Callaway (KCØMV)</p>
-              <p>8:45 PM, 147.315 (+)</p>
-          </div>
-          <div class="text-sm text-gray-500 dark:text-gray-300">
-              <p class="font-semibold text-gray-900 dark:text-white">Columbia (KØSI)</p>
-              <p>9:00 PM, 146.760 (-), 127.3</p>
-          </div>
-          <div class="text-sm text-gray-500 dark:text-gray-300">
-              <p class="font-semibold text-gray-900 dark:text-white">Mexico (AAØRC)</p>
-              <p>Tue 8:00 PM, 147.255 (+), 127.3</p>
-          </div>
-          <div class="text-sm text-gray-500 dark:text-gray-300">
-              <p class="font-semibold text-gray-900 dark:text-white">Boonville (WØBRC)</p>
-              <p>Thu 8:30 PM, 147.360 (+), 127.3</p>
-          </div>
-          <div class="text-sm text-gray-500 dark:text-gray-300">
-              <p class="font-semibold text-gray-900 dark:text-white">MON (HF)</p>
-              <p>Daily 6:30 & 9:45 PM, 3.585 MHz</p>
-          </div>
-           <div class="text-sm text-gray-500 dark:text-gray-300">
-              <p class="font-semibold text-gray-900 dark:text-white">MTN (HF)</p>
-              <p>Daily 5:30 PM, 3.963 MHz</p>
-          </div>
-           <div class="text-sm text-gray-500 dark:text-gray-300">
-              <p class="font-semibold text-gray-900 dark:text-white">MESN (HF)</p>
-              <p>Sun 2:00 PM, 3.963/7.263 MHz</p>
-          </div>
+      
+      <div class="mt-4">
+        <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300 mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">VHF/UHF Nets (Sorted by Distance)</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <!-- Callaway (Fulton) ~26mi -->
+            <div class="text-sm text-gray-500 dark:text-gray-300">
+                <p class="font-semibold text-brand-800 dark:text-brand-400">
+                    <a href="https://callawaymoamateurradio.wordpress.com/" target="_blank" class="hover:underline">Callaway (KCØMV)</a>
+                </p>
+                <p>8:45 PM, 147.315 (+)</p>
+                <p class="text-xs text-gray-400">Fulton, MO (~26 mi)</p>
+            </div>
+
+            <!-- Columbia ~31mi -->
+            <div class="text-sm text-gray-500 dark:text-gray-300">
+                <p class="font-semibold text-brand-800 dark:text-brand-400">
+                    <a href="http://k0si.net/" target="_blank" class="hover:underline">Columbia (KØSI)</a>
+                </p>
+                <p>9:00 PM, 146.760 (-), 127.3</p>
+                <p class="text-xs text-gray-400">Columbia, MO (~31 mi)</p>
+            </div>
+
+            <!-- Boonville ~45mi -->
+            <div class="text-sm text-gray-500 dark:text-gray-300">
+                <p class="font-semibold text-brand-800 dark:text-brand-400">
+                    <a href="http://w0brc.org/" target="_blank" class="hover:underline">Boonville (WØBRC)</a>
+                </p>
+                <p>Thu 8:30 PM, 147.360 (+), 127.3</p>
+                <p class="text-xs text-gray-400">Boonville, MO (~45 mi)</p>
+            </div>
+
+            <!-- Mexico ~48mi -->
+            <div class="text-sm text-gray-500 dark:text-gray-300">
+                <p class="font-semibold text-brand-800 dark:text-brand-400">
+                    <a href="http://www.aecimo.org/" target="_blank" class="hover:underline">Mexico (AAØRC)</a>
+                </p>
+                <p>Tue 8:00 PM, 147.255 (+), 127.3</p>
+                <p class="text-xs text-gray-400">Mexico, MO (~48 mi)</p>
+            </div>
+        </div>
       </div>
+
+      <div class="mt-6">
+        <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300 mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">HF Nets</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="text-sm text-gray-500 dark:text-gray-300">
+                <p class="font-semibold text-gray-900 dark:text-white">MON (HF)</p>
+                <p>Daily 6:30 & 9:45 PM</p>
+                <p>3.585 MHz</p>
+            </div>
+             <div class="text-sm text-gray-500 dark:text-gray-300">
+                <p class="font-semibold text-gray-900 dark:text-white">MTN (HF)</p>
+                <p>Daily 5:30 PM</p>
+                <p>3.963 MHz</p>
+            </div>
+             <div class="text-sm text-gray-500 dark:text-gray-300">
+                <p class="font-semibold text-gray-900 dark:text-white">MESN (HF)</p>
+                <p>Sun 2:00 PM</p>
+                <p>3.963 / 7.263 MHz</p>
+            </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

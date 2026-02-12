@@ -1,43 +1,78 @@
-<footer class="bg-gray-100 border-t border-gray-200 mt-12">
+<footer class="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div class="md:flex md:justify-between">
+
+            <!-- Repeater Info (Replaces Contact) -->
             <div class="mb-8 md:mb-0">
-                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact</h3>
+                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Repeater Info</h3>
                 <ul class="mt-4 space-y-4">
                     <li>
-                        <a href="mailto:{{ site.email }}" class="text-base text-gray-500 hover:text-brand-900">
-                            {{ site.email }}
-                        </a>
+                        <p class="text-base text-gray-500 dark:text-gray-400"><strong>VHF:</strong> 147.000 (-) 127.3
+                        </p>
                     </li>
                     <li>
-                        <p class="text-base text-gray-500">Jefferson City, MO</p>
+                        <p class="text-base text-gray-500 dark:text-gray-400"><strong>UHF:</strong> 442.150 (+) 127.3
+                        </p>
                     </li>
                 </ul>
             </div>
-            <div>
+
+            <!-- Quick Links -->
+            <div class="mb-8 md:mb-0">
                 <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Quick Links</h3>
                 <ul class="mt-4 space-y-4">
                     <li><a href="{{ '/n0ss/' | relative_url }}"
-                            class="text-base text-gray-500 hover:text-brand-900">N0SS Archive</a></li>
+                            class="text-base text-gray-500 dark:text-gray-400 hover:text-brand-900 dark:hover:text-brand-400">N0SS
+                            Archive</a></li>
                     <li><a href="{{ '/minutes/' | relative_url }}"
-                            class="text-base text-gray-500 hover:text-brand-900">Meeting Minutes</a></li>
+                            class="text-base text-gray-500 dark:text-gray-400 hover:text-brand-900 dark:hover:text-brand-400">Meeting
+                            Minutes</a></li>
                     <li><a href="{{ '/assets/documents/NetProcedures_Aug_15_2022.pdf' | relative_url }}"
-                            class="text-base text-gray-500 hover:text-brand-900">Net Procedures</a></li>
+                            class="text-base text-gray-500 dark:text-gray-400 hover:text-brand-900 dark:hover:text-brand-400">Net
+                            Procedures</a></li>
                     <li><a href="{{ '/assets/documents/MMARC_By-Laws_12-14-13.pdf' | relative_url }}"
-                            class="text-base text-gray-500 hover:text-brand-900">By-Laws</a></li>
+                            class="text-base text-gray-500 dark:text-gray-400 hover:text-brand-900 dark:hover:text-brand-400">By-Laws</a>
+                    </li>
                 </ul>
             </div>
+
+            <!-- Social Icons -->
             <div>
                 <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Social</h3>
-                <ul class="mt-4 space-y-4">
-                    <li><a href="https://www.facebook.com/MidMOAmateurRadioClub/"
-                            class="text-base text-gray-500 hover:text-brand-900">Facebook</a></li>
-                    <li><a href="https://groups.io/g/MMARC-JeffCity"
-                            class="text-base text-gray-500 hover:text-brand-900">Groups.IO</a></li>
-                </ul>
+                <div class="mt-4 flex space-x-6">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/MidMOAmateurRadioClub/"
+                        class="text-gray-400 hover:text-gray-500 dark:hover:text-white">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <!-- Groups.io (Users Icon) -->
+                    <a href="https://groups.io/g/MMARC-JeffCity"
+                        class="text-gray-400 hover:text-gray-500 dark:hover:text-white">
+                        <span class="sr-only">Groups.IO</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="mt-4">
+                    <a href="mailto:{{ site.email }}"
+                        class="text-sm text-gray-500 dark:text-gray-400 hover:text-brand-900 dark:hover:text-brand-400 flex items-center">
+                        <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        {{ site.email }}
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="mt-8 border-t border-gray-200 pt-8 text-center">
+        <div class="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8 text-center">
             <p class="text-base text-gray-400">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights
                 reserved.</p>
         </div>
