@@ -45,6 +45,11 @@ title: Home
       <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Join Us</h3>
       <div class="mt-2 max-w-xl text-sm text-gray-500 dark:text-gray-300">
         <p>Meetings are held every month at 7 p.m. on the Second Thursday in the Training Room of the Cole County Sheriff's Office.</p>
+        <p class="mt-4">
+            <a href="https://www.google.com/maps/search/?api=1&query=350+E+High+St,+Jefferson+City,+MO+65101" target="_blank" class="text-brand-800 hover:text-brand-900 font-medium">
+                View Map & Directions &rarr;
+            </a>
+        </p>
       </div>
     </div>
   </div>
@@ -55,6 +60,43 @@ title: Home
       <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Upcoming Events</h3>
       <div class="mt-2 max-w-xl text-sm text-gray-500 dark:text-gray-300">
         <p><strong>Weekly Net:</strong> Every Wednesday at 8:00 PM on the 147.000 repeater.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Missouri Nets -->
+  <div class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg sm:col-span-2 lg:col-span-3">
+    <div class="px-4 py-5 sm:p-6">
+      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Area Nets</h3>
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="text-sm text-gray-500 dark:text-gray-300">
+              <p class="font-semibold text-gray-900 dark:text-white">Callaway (KCØMV)</p>
+              <p>8:45 PM, 147.315 (+)</p>
+          </div>
+          <div class="text-sm text-gray-500 dark:text-gray-300">
+              <p class="font-semibold text-gray-900 dark:text-white">Columbia (KØSI)</p>
+              <p>9:00 PM, 146.760 (-), 127.3</p>
+          </div>
+          <div class="text-sm text-gray-500 dark:text-gray-300">
+              <p class="font-semibold text-gray-900 dark:text-white">Mexico (AAØRC)</p>
+              <p>Tue 8:00 PM, 147.255 (+), 127.3</p>
+          </div>
+          <div class="text-sm text-gray-500 dark:text-gray-300">
+              <p class="font-semibold text-gray-900 dark:text-white">Boonville (WØBRC)</p>
+              <p>Thu 8:30 PM, 147.360 (+), 127.3</p>
+          </div>
+          <div class="text-sm text-gray-500 dark:text-gray-300">
+              <p class="font-semibold text-gray-900 dark:text-white">MON (HF)</p>
+              <p>Daily 6:30 & 9:45 PM, 3.585 MHz</p>
+          </div>
+           <div class="text-sm text-gray-500 dark:text-gray-300">
+              <p class="font-semibold text-gray-900 dark:text-white">MTN (HF)</p>
+              <p>Daily 5:30 PM, 3.963 MHz</p>
+          </div>
+           <div class="text-sm text-gray-500 dark:text-gray-300">
+              <p class="font-semibold text-gray-900 dark:text-white">MESN (HF)</p>
+              <p>Sun 2:00 PM, 3.963/7.263 MHz</p>
+          </div>
       </div>
     </div>
   </div>
