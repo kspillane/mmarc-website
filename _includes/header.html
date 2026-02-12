@@ -1,35 +1,68 @@
-<header class="site-header" x-data="{ mobileMenuOpen: false }">
-    <div class="wrapper">
-        <div class="header-flex">
-            <img src="{{ '/assets/images/arrl.jpg' | relative_url }}" alt="ARRL Logo" class="header-logo">
-            <a class="site-title" href="{{ '/' | relative_url }}">
-                {{ site.title | escape }}
-            </a>
-            <img src="{{ '/assets/images/mmarc.jpg' | relative_url }}" alt="MMARC Logo" class="header-logo">
-        </div>
+<header class="bg-white shadow-sm border-b border-gray-200" x-data="{ mobileMenuOpen: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-24">
 
-        <nav class="site-nav">
-            <button class="menu-icon" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle menu">
-                <svg viewBox="0 0 18 15" width="18px" height="15px">
-                    <path
-                        d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
-                </svg>
-            </button>
+            <!-- Logo Left -->
+            <div class="flex-shrink-0 flex items-center">
+                <img class="h-16 w-auto" src="{{ '/assets/images/mmarc.jpg' | relative_url }}" alt="MMARC Logo">
+                <a href="{{ '/' | relative_url }}" class="ml-4 text-2xl font-bold text-brand-800 hidden md:block">
+                    {{ site.title | escape }}
+                </a>
+            </div>
 
-            <div class="trigger" :class="{ 'open': mobileMenuOpen }">
-                <a class="contrast" href="{{ '/' | relative_url }}">Home</a>
-                <a class="contrast" href="{{ '/about/' | relative_url }}">About</a>
-                <a class="contrast" href="{{ '/minutes/' | relative_url }}">Minutes</a>
-                <a class="contrast" href="{{ '/contact/' | relative_url }}">Contact</a>
-                <a class="contrast" href="{{ '/n0ss/' | relative_url }}" target="_blank">N0SS Archive</a>
-                <!-- Pico.css automatically handles dark mode based on system prefs, 
-                     but we can keep the manual toggle if we want to override 'data-theme' 
-                -->
-                <button class="outline contrast" @click="$store.theme.toggle()">
+            <!-- Nav Center/Right -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-brand-800 font-medium">Home</a>
+                <a href="{{ '/about/' | relative_url }}"
+                    class="text-gray-700 hover:text-brand-800 font-medium">About</a>
+                <a href="{{ '/minutes/' | relative_url }}"
+                    class="text-gray-700 hover:text-brand-800 font-medium">Minutes</a>
+                <a href="{{ '/contact/' | relative_url }}"
+                    class="text-gray-700 hover:text-brand-800 font-medium">Contact</a>
+                <a href="{{ '/n0ss/' | relative_url }}" target="_blank"
+                    class="text-gray-700 hover:text-brand-800 font-medium">N0SS Archive</a>
+
+                <!-- Dark Mode Toggle -->
+                <button @click="$store.theme.toggle()" class="p-2 rounded-full hover:bg-gray-100 text-gray-600">
                     <span x-show="$store.theme.current === 'light'">🌙</span>
                     <span x-show="$store.theme.current === 'dark'">☀️</span>
                 </button>
             </div>
-        </nav>
+
+            <!-- ARRL Logo Right -->
+            <div class="hidden md:flex flex-shrink-0 items-center ml-4">
+                <img class="h-16 w-auto" src="{{ '/assets/images/arrl.jpg' | relative_url }}" alt="ARRL Logo">
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" type="button"
+                    class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                    aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                        <path fill-rule="evenodd"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden" x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="{{ '/' | relative_url }}"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
+            <a href="{{ '/about/' | relative_url }}"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+            <a href="{{ '/minutes/' | relative_url }}"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Minutes</a>
+            <a href="{{ '/contact/' | relative_url }}"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+            <a href="{{ '/n0ss/' | relative_url }}"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">N0SS
+                Archive</a>
+        </div>
     </div>
 </header>

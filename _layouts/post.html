@@ -1,19 +1,30 @@
 ---
 layout: default
 ---
-<div class="card">
-    <article class="post">
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title | escape }}</h1>
-            <p class="post-meta">
+<div class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg">
+    <article class="post px-4 py-5 sm:p-6" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header mb-6">
+            <h1 class="post-title text-3xl font-extrabold text-gray-900 dark:text-white" itemprop="name headline">{{
+                page.title | escape }}</h1>
+            <p class="post-meta text-sm text-gray-500 dark:text-gray-400">
                 <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                     {{ page.date | date: "%b %-d, %Y" }}
                 </time>
+                {%- if page.author -%}
+                • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+                        itemprop="name">{{ page.author }}</span></span>
+                {%- endif -%}
             </p>
         </header>
 
-        <div class="post-content">
+        <div class="post-content prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300"
+            itemprop="articleBody">
             {{ content }}
+        </div>
+
+        <div class="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">
+            <a href="{{ '/' | relative_url }}" class="text-brand-800 hover:text-brand-900 font-medium">&larr; Back to
+                Home</a>
         </div>
     </article>
 </div>

@@ -5,56 +5,38 @@
   <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
   <meta name="description"
     content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.slate.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              800: '#003366', // Navy Blue
+              900: '#002244',
+            },
+            secondary: {
+              500: '#f0ad4e', // Gold/Amber
+            }
+          }
+        }
+      }
+    }
+  </script>
+
   <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --pico-font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      --pico-border-radius: 8px;
+    body {
+      font-family: 'Inter', sans-serif;
     }
 
-    .site-header {
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--pico-muted-border-color);
-    }
-
-    .site-nav {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .site-title {
-      font-weight: bold;
-      font-size: 1.25rem;
-      text-decoration: none;
-      color: var(--pico-color);
-    }
-
-    .menu-icon {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-
-      .trigger {
-        display: none;
-        width: 100%;
-      }
-
-      .trigger.open {
-        display: flex;
-        flex-direction: column;
-        margin-top: 1rem;
-      }
-
-      .site-header .wrapper>div {
-        flex-wrap: wrap;
-      }
+    [x-cloak] {
+      display: none !important;
     }
   </style>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
