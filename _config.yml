@@ -4,11 +4,6 @@ description: >-
   The official website of the Mid-MO Amateur Radio Club (K0ETY) in Jefferson City, MO.
 baseurl: "/mmarc-website"
 url: "https://kspillane.github.io"
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-
 collections:
   minutes:
     output: true
@@ -16,6 +11,12 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
+  projects:
+    output: true
+    permalink: /projects/:slug/
+  operating:
+    output: true
+    permalink: /operating/:slug/
 
 defaults:
   - scope:

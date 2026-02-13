@@ -11,16 +11,18 @@
             </div>
 
             <!-- Nav Center/Right -->
-            <div class="hidden md:flex space-x-8 items-center">
+            <div class="hidden md:flex space-x-6 items-center">
                 <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-brand-800 font-medium">Home</a>
                 <a href="{{ '/about/' | relative_url }}"
                     class="text-gray-700 hover:text-brand-800 font-medium">About</a>
-                <a href="{{ '/minutes/' | relative_url }}"
-                    class="text-gray-700 hover:text-brand-800 font-medium">Minutes</a>
-                <a href="{{ '/contact/' | relative_url }}"
-                    class="text-gray-700 hover:text-brand-800 font-medium">Contact</a>
-                <a href="{{ '/n0ss/' | relative_url }}" target="_blank"
-                    class="text-gray-700 hover:text-brand-800 font-medium">N0SS Archive</a>
+                <a href="{{ '/resources/' | relative_url }}"
+                    class="text-gray-700 hover:text-brand-800 font-medium">Resources</a>
+                <a href="{{ '/projects/' | relative_url }}"
+                    class="text-gray-700 hover:text-brand-800 font-medium">Projects</a>
+                <a href="{{ '/outreach/' | relative_url }}"
+                    class="text-gray-700 hover:text-brand-800 font-medium">Outreach</a>
+                <a href="{{ '/history/' | relative_url }}"
+                    class="text-gray-700 hover:text-brand-800 font-medium">History</a>
 
                 <!-- Dark Mode Toggle -->
                 <button @click="$store.theme.toggle()" class="p-2 rounded-full hover:bg-gray-100 text-gray-600">
@@ -56,13 +58,14 @@
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
             <a href="{{ '/about/' | relative_url }}"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
-            <a href="{{ '/minutes/' | relative_url }}"
-                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Minutes</a>
-            <a href="{{ '/contact/' | relative_url }}"
-                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
-            <a href="{{ '/n0ss/' | relative_url }}"
-                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">N0SS
-                Archive</a>
+            <a href="{{ '/resources/' | relative_url }}"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Resources</a>
+            <a href="{{ '/projects/' | relative_url }}"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Projects</a>
+            <a href="{{ '/outreach/' | relative_url }}"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Outreach</a>
+            <a href="{{ '/history/' | relative_url }}"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">History</a>
         </div>
     </div>
 </header>

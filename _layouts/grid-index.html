@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="bg-white dark:bg-gray-800 shadow overflow-hidden sm:rounded-lg mb-8">
+    <div class="px-4 py-5 sm:px-6 border-b border-gray-200 dark:border-gray-700">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white">{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="mt-2 text-lg text-gray-500 dark:text-gray-400">{{ page.description }}</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for item in site[page.collection] %}
+    <a href="{{ item.url | relative_url }}" class="block group h-full">
+        <div
+            class="h-full bg-white dark:bg-gray-800 overflow-hidden shadow-lg rounded-lg transition-transform duration-300 transform group-hover:-translate-y-1">
+            {% if item.image %}
+            <div class="relative h-48 w-full">
+                <img class="absolute h-full w-full object-cover" src="{{ item.image | relative_url }}"
+                    alt="{{ item.title }}">
+            </div>
+            {% endif %}
+            <div class="px-6 py-4">
+                <h2
+                    class="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-brand-800 dark:group-hover:text-brand-400 transition-colors duration-200">
+                    {{ item.title }}
+                </h2>
+                {% if item.date %}
+                <p class="text-sm text-gray-400 mt-1">{{ item.date | date: "%B %d, %Y" }}</p>
+                {% endif %}
+                <p class="mt-3 text-gray-500 dark:text-gray-300 text-sm line-clamp-3">
+                    {{ item.excerpt | strip_html | truncatewords: 30 }}
+                </p>
+            </div>
+            <div class="px-6 pb-4">
+                <span class="text-brand-600 dark:text-brand-400 text-sm font-medium group-hover:underline">Read more
+                    &rarr;</span>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
