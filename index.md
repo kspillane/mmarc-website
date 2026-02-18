@@ -16,7 +16,7 @@ title: Home
                 Mid-MO Amateur Radio Club
             </h1>
             <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">
-                Serving Jefferson City and Central Missouri (K0ETY). We are a community of radio enthusiasts dedicated to emergency communication, technical education, and the art of radio.
+                Serving Jefferson City and Central Missouri. We are a community of radio enthusiasts dedicated to emergency communication, technical education, and the art of radio.
             </p>
             <div class="flex space-x-4">
                 <a href="{{ '/about/' | relative_url }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-brand-800 hover:bg-brand-900">
@@ -45,8 +45,8 @@ title: Home
                 Get Directions &rarr;
             </a>
             <div class="mt-4 border-t border-brand-700 pt-4">
-                 <h4 class="text-xs font-semibold tracking-wider text-brand-200 uppercase mb-1">Weekly Net</h4>
-                 <p class="text-sm">Wednesdays @ 8:00 PM<br>147.000 (-) 127.3</p>
+                 <h4 class="text-xs font-semibold tracking-wider text-brand-200 uppercase mb-1">Mid MO ARC Weekly Net</h4>
+                 <p class="text-sm">Wednesdays @ 8:00 PM CT<br>147.000 (-) / 442.150 (+) 127.3 PL Tone</p>
             </div>
         </div>
     </div>
