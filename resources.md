@@ -45,116 +45,306 @@ permalink: /resources/
         <!-- MMARC Linn Linked Repeater -->
         <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-blue-500">
             <div class="flex justify-between items-start">
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">147.165 MHz (+)</h3>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">145.390 MHz (-)</h3>
                 <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">K0ETY</span>
             </div>
             <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                <li><strong>Location:</strong> Linn, MO</li>
+                <li><strong>Location:</strong> Linn, MO (MSHP Tower)</li>
                 <li><strong>Mode:</strong> Analog FM</li>
                 <li><strong>Tone:</strong> 127.3 Hz</li>
                 <li><strong>Sponsor:</strong> Mid-MO ARC</li>
             </ul>
             <p class="mt-4 text-xs text-gray-500 italic">Part of the MMARC linked repeater system.</p>
         </div>
+    </div>
 
-        <!-- Cole County EMA -->
-        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-blue-500">
-            <div class="flex justify-between items-start">
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">146.895 MHz (-)</h3>
-                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">W0GRI</span>
-            </div>
-            <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                <li><strong>Location:</strong> Jefferson City, MO</li>
-                <li><strong>Mode:</strong> Analog FM</li>
-                <li><strong>Tone:</strong> 127.3 Hz</li>
-                <li><strong>Sponsor:</strong> Cole County EMA</li>
-            </ul>
-        </div>
-
-        <!-- KD0NPV DMR -->
-        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-green-500">
-            <div class="flex justify-between items-start">
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">443.250 MHz (+)</h3>
-                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">KD0NPV</span>
-            </div>
-            <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                <li><strong>Location:</strong> Jefferson City, MO</li>
-                <li><strong>Mode:</strong> DMR (Brandmeister)</li>
-                <li><strong>Color Code:</strong> 1</li>
-                <li><strong>Sponsor:</strong> Private</li>
-            </ul>
-        </div>
-
-        <!-- CMRA Columbia VHF -->
-        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-blue-500">
-            <div class="flex justify-between items-start">
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">146.760 MHz (-)</h3>
-                <a href="https://k0si.net/" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-blue-100 text-blue-800 hover:bg-blue-200 hover:text-blue-900 text-xs font-semibold rounded-full transition-colors">K0SI</a>
-            </div>
-            <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                <li><strong>Location:</strong> Columbia, MO</li>
-                <li><strong>Mode:</strong> Analog FM</li>
-                <li><strong>Tone:</strong> 127.3 Hz</li>
-                <li><strong>Sponsor:</strong> Central MO Radio Assoc.</li>
-            </ul>
-        </div>
-
-        <!-- CMRA Columbia DMR -->
-        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-green-500">
-            <div class="flex justify-between items-start">
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">444.100 MHz (+)</h3>
-                <a href="https://k0si.net/" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-green-100 text-green-800 hover:bg-green-200 hover:text-green-900 text-xs font-semibold rounded-full transition-colors">K0SI</a>
-            </div>
-            <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                <li><strong>Location:</strong> Columbia, MO</li>
-                <li><strong>Mode:</strong> DMR (Brandmeister)</li>
-                <li><strong>Color Code:</strong> 1</li>
-                <li><strong>Sponsor:</strong> Central MO Radio Assoc.</li>
-            </ul>
-        </div>
-
-        <!-- Callaway County -->
-        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-blue-500">
-            <div class="flex justify-between items-start">
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">147.315 MHz (+)</h3>
-                <a href="https://www.qsl.net/kc0mv/" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-blue-100 text-blue-800 hover:bg-blue-200 hover:text-blue-900 text-xs font-semibold rounded-full transition-colors">KC0MV</a>
-            </div>
-            <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                <li><strong>Location:</strong> Fulton, MO</li>
-                <li><strong>Mode:</strong> Analog FM</li>
-                <li><strong>Tone:</strong> 127.3 Hz</li>
-                <li><strong>Sponsor:</strong> Callaway ARC</li>
-            </ul>
-        </div>
-
-        <!-- Moniteau County -->
-        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-blue-500">
-            <div class="flex justify-between items-start">
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">147.390 MHz (+)</h3>
-                <a href="https://www.facebook.com/MoniteauCountyARC/" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-blue-100 text-blue-800 hover:bg-blue-200 hover:text-blue-900 text-xs font-semibold rounded-full transition-colors">N0QO</a>
-            </div>
-            <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                <li><strong>Location:</strong> California, MO</li>
-                <li><strong>Mode:</strong> Analog FM</li>
-                <li><strong>Tone:</strong> 127.3 Hz</li>
-                <li><strong>Sponsor:</strong> Moniteau County ARC</li>
-            </ul>
-        </div>
-
-        <!-- Boonslick ARC -->
-        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-blue-500">
-            <div class="flex justify-between items-start">
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">147.360 MHz (+)</h3>
-                <a href="http://w0brc.org/" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-blue-100 text-blue-800 hover:bg-blue-200 hover:text-blue-900 text-xs font-semibold rounded-full transition-colors">W0BRC</a>
-            </div>
-            <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                <li><strong>Location:</strong> Boonville, MO</li>
-                <li><strong>Mode:</strong> Analog FM</li>
-                <li><strong>Tone:</strong> 127.3 Hz</li>
-                <li><strong>Sponsor:</strong> Boonslick ARC</li>
-            </ul>
-        </div>
-
+    <div class="overflow-x-auto my-8 bg-white dark:bg-gray-800 shadow rounded-lg not-prose">
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            <thead class="bg-gray-50 dark:bg-gray-900">
+                <tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Frequency</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Offset</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Call</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Location</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Access</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Mode</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">443.1750</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">KB4VSP</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Jefferson City, SEMA Tower</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">127.3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">146.8650</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">KB4VSP</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">Jefferson City, SEMA Tower</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">CC 3 NAC 4F9 RAN 1 127.3</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">FM DMR DSTAR M17 NXDN P-25 YSF</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">444.8750</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">KB4VSP</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">Holts Summit</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">CC 3 NAC 4F9 RAN 1 127.3</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">FM DMR DSTAR M17 NXDN P-25 YSF</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">444.1750</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">WX0BC</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Ashland</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">107.2</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">444.9500</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">AC0WZ</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Fulton</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">CC 1</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">DMR</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">147.3150</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">KC0MV</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Millersburg</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">127.3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">146.7600</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">K0SI</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">Columbia</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">CC 3 NAC 4F9 RAN 34 127.3</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">FM DMR DSTAR NXDN P-25 YSF</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">444.4250</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">K0SI</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Columbia</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">CC 3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">DMR</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">146.6250</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">AA0NC</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Eldon</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">131.8</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">147.2700</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">N0QVO</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Eldon</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">123.0</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">146.6100</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">WX0BC</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Columbia</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">127.3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">442.9250</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">AA0IY</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Barnett, Golden Beach</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">127.3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">146.8950</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">N0GYE</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Brinktown</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">CSQ</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">442.6000</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">N0NOE</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Belle</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">CC 2</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">DMR</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">444.5000</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">N0QVO</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Osage Beach</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">127.3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">146.7900</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">W0GS</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Dixon</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">88.5</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">147.1350</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">KB0WCY</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Hermann</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">&mdash;</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">444.7000</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">KA0GFC</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Boonville</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">77.0</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">442.7000</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">KA0GFC</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Boonville</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">77.0</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">147.3600</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">W0BRC</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Boonville</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">&mdash;</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">146.9550</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">KA0RFO</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Laurie</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">192.8</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">443.0250</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">AA0RC</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Centralia</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">CC 3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">DMR</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">146.7300</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">N0ZS</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Sunrise Beach</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">127.3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">444.8250</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">AA0RC</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Mexico, SSM Audrain</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">127.3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">147.2550</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">AA0RC</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Mexico, KWWR Backup Tower</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">127.3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM AllStar</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">443.4250</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">AA0RC</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Mexico, KWWR Backup Tower</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">CC 3 127.3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">DMR</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">147.3900</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">KB0QWQ</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Stover</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">127.3</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">443.4250</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">WB0OBX</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Cameron</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">CC 7</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">DMR</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">444.0250</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">AD0JA</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">High Hill, Water Tower</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">CC 2</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM DMR</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">146.8200</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">K0NXA</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">Rolla, MSHP Troop I HQ</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">110.9</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">FM AllStar EchoLink</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">145.4500</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">W0EEE</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Rolla, TJ Residence Hall</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">110.9</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">443.8250</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">W0EEE</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Rolla, TJ Residence Hall</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">CC 12 110.9</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">FM DMR YSF</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">145.1300</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">-0.6 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">W0GS</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">Rolla, Phelps Health Medical Office Bldg</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">88.5</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">FM</td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">444.0000</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">+5 MHz</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 dark:text-blue-400 font-semibold">W0CMD</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">Rolla, Phelps Health Med Office Bldg</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">&mdash;</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">DSTAR</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <h2>Area & Statewide Nets</h2>
