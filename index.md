@@ -33,7 +33,8 @@ title: Home
     <div class="bg-brand-900 dark:bg-gray-900 shadow rounded-lg overflow-hidden p-6 text-white flex flex-col justify-between relative">
         <div>
             <h3 class="text-sm font-semibold tracking-wider text-brand-200 uppercase mb-1">Next Meeting</h3>
-            <p class="text-3xl font-bold mb-2">2nd Thursday</p>
+            <p id="next-meeting-date" class="text-3xl font-bold mb-1">Upcoming</p>
+            <p class="text-sm text-brand-200 mb-3 block">2nd Thursday of each month</p>
             <p class="text-lg text-brand-100">7:00 PM</p>
             <p class="text-sm text-brand-300 mt-4">
                 Cole County Sheriff's Office<br>
@@ -167,3 +168,45 @@ title: Home
         </div>
     </a>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        function getNextSecondThursday(date) {
+            let year = date.getFullYear();
+            let month = date.getMonth();
+            let d = new Date(year, month, 1);
+            let dayOfWeek = d.getDay();
+            
+            // Thursday is 4
+            let diff = 4 - dayOfWeek;
+            if (diff < 0) {
+                diff += 7;
+            }
+            
+            // The first Thursday is 1 + diff
+            let firstThursday = 1 + diff;
+            let secondThursday = firstThursday + 7;
+            
+            let meetingDate = new Date(year, month, secondThursday);
+            meetingDate.setHours(19, 0, 0, 0); // 7 PM
+            
+            if (date > meetingDate) {
+                // Return next month's second Thursday
+                return getNextSecondThursday(new Date(year, month + 1, 1));
+            }
+            
+            return meetingDate;
+        }
+
+        const now = new Date();
+        const nextMeeting = getNextSecondThursday(now);
+        
+        const options = { month: 'long', day: 'numeric' };
+        const formattedDate = nextMeeting.toLocaleDateString('en-US', options);
+        
+        const meetingDateEl = document.getElementById('next-meeting-date');
+        if (meetingDateEl) {
+            meetingDateEl.textContent = formattedDate;
+        }
+    });
+</script>
