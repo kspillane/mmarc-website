@@ -11,6 +11,9 @@ permalink: /new-hams/
         <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light">
             We are your local authority on all wireless communication, from unlicensed tech to global amateur radio. There's a place for everyone in our community!
         </p>
+        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light">
+        If you are new to radio, this page will help explain the different entrypoints into the use of radio, and what can use it for.
+        </p>
     </div>
 
     <!-- The "No License Required" Tier -->
