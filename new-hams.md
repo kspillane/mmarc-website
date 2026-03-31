@@ -25,7 +25,7 @@ permalink: /new-hams/
         <div class="prose dark:prose-invert max-w-none">
             <p class="text-lg font-semibold text-teal-600 dark:text-teal-400">Technologies: FRS (Family Radio Service), CB (Citizens Band), and Meshtastic (LoRa/ISM)</p>
             <p>
-                Looking for <strong>instant gratification</strong>? These services offer a fantastic starting point with low cost and absolutely zero tests required. They are excellent choices for short-range, car-to-car communication or exchanging local mesh text messages.
+                 These services offer a fantastic starting point with low cost and absolutely zero tests required. They are excellent choices for short-range, car-to-car communication or exchanging local mesh text messages.
             </p>
             <div class="bg-teal-50 dark:bg-teal-900/20 border-l-4 border-teal-500 p-5 mt-6 rounded-r-lg">
                 <p class="m-0 text-teal-900 dark:text-teal-100">
@@ -39,7 +39,7 @@ permalink: /new-hams/
     <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 transition-transform hover:-translate-y-1 duration-300">
         <div class="flex items-center gap-4 mb-4">
             <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold">2</div>
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white m-0">The "Simple License" Tier</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white m-0">General Mobile Radio Service (GMRS) - The "Simple License" Tier</h2>
         </div>
         <div class="prose dark:prose-invert max-w-none">
             <p class="text-lg font-semibold text-blue-600 dark:text-blue-400">Technology: GMRS</p>
