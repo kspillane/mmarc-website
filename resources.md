@@ -10,6 +10,9 @@ permalink: /resources/
     </p>
 
     <h2>Area Repeaters (50-Mile Radius)</h2>
+    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 mb-6">
+        Below are our club's primary repeaters. The table following them lists other local area repeaters within 50 miles, sourced from <a href="https://www.repeaterbook.com" target="_blank" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 hover:underline">RepeaterBook</a> as of March 2026.
+    </p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose my-8">
         
         <!-- MMARC VHF -->
