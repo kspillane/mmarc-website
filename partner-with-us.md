@@ -6,9 +6,8 @@ permalink: /outreach/
 
 <div class="prose dark:prose-invert max-w-none" markdown="1">
 
-<p class="lead text-xl text-gray-600 dark:text-gray-300 mb-10 mt-4 border-b border-gray-200 dark:border-gray-700 pb-8">
-  Amateur radio is about service. MMARC is dedicated to serving Jefferson City and Cole County through emergency communications, public events, and community education.
-</p>
+Amateur radio is about service. MMARC is dedicated to serving Jefferson City and Cole County through emergency communications, public events, and community education.
+{: .lead .text-xl .text-gray-600 .dark:text-gray-300 .mb-10 .mt-4 .border-b .border-gray-200 .dark:border-gray-700 .pb-8 }
 
 ## Public Event Communications
 
