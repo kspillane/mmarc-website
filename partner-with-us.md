@@ -4,11 +4,6 @@ title: Community Outreach
 permalink: /outreach/
 ---
 
-<div class="prose dark:prose-invert max-w-none" markdown="1">
-
-<p class="lead text-xl text-gray-600 dark:text-gray-300 mb-10 mt-4 border-b border-gray-200 dark:border-gray-700 pb-8">
-  Amateur radio is about service. MMARC is dedicated to serving Jefferson City and Cole County through emergency communications, public events, and community education.
-</p>
 
 ## Public Event Communications
 
@@ -53,4 +48,4 @@ We actively partner with local Scout troops to help them earn the **Radio Merit 
 * **Practical Skills:** We help scouts build their first wire antennas.
 * **On The Air:** Best of all, we get them on the air to talk with other amateur radio operators around the country and the world!
 
-</div>
+
