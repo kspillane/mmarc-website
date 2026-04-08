@@ -24,7 +24,7 @@ permalink: /contact/
                    this.formData.message.trim() !== '';
         },
 
-        async submitForm() {
+        async submitForm(event) {
             // honeypot check
             if (this.formData.bot_check !== '') {
                 // If the bot field is filled, pretend success but do nothing.
@@ -35,35 +35,31 @@ permalink: /contact/
             this.loading = true;
             this.error = false;
 
-            // Prepare payload
-            const payload = {
-                name: this.formData.name,
-                email: this.formData.email,
-                recipient: this.formData.recipient, // Used by n8n to route
-                message: this.formData.message
-            };
+            const form = event.target;
+            const payload = new FormData(form);
 
-            // TODO: Replace with actual n8n webhook URL when ready
-            // For now, simulate a network request
             try {
-                // Simulate delay
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                
-                // Simulate success (Uncomment fetch below when URL is ready)
-                /*
-                const response = await fetch('YOUR_N8N_WEBHOOK_URL', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: payload,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 });
-                if (!response.ok) throw new Error('Network error');
-                */
                 
-                this.success = true;
-                this.formData.name = '';
-                this.formData.email = '';
-                this.formData.message = '';
-                this.formData.recipient = 'General Inquiry';
+                const result = await response.json();
+                
+                if (response.status === 200) {
+                    this.success = true;
+                    this.formData.name = '';
+                    this.formData.email = '';
+                    this.formData.message = '';
+                    this.formData.recipient = 'General Inquiry';
+                    this.formData.bot_check = '';
+                } else {
+                    this.errorMessage = result.message || 'Something went wrong. Please try again.';
+                    throw new Error(result.message || 'Network error');
+                }
                 
             } catch (e) {
                 this.error = true;
@@ -113,7 +109,10 @@ permalink: /contact/
                 </div>
             </div>
 
-            <form @submit.prevent="submitForm" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+            <form action="https://api.web3forms.com/submit" method="POST" @submit.prevent="submitForm" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="3b4bc64c-65f9-45ce-8dab-2dc786a60e30">
                 
                 <!-- Recipient Dropdown -->
                 <div class="sm:col-span-2">
