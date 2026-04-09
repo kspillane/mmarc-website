@@ -1,0 +1,157 @@
+---
+layout: page
+title: Club Calendar
+description: "Upcoming events, nets, and meetings."
+permalink: /calendar/
+---
+
+<div class="max-w-7xl mx-auto py-8">
+
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden">
+        <!-- Header Controls -->
+        <div class="px-6 py-6 sm:px-8 border-b border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Events Schedule</h2>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Join us for upcoming meetings, test sessions, and nets!</p>
+            </div>
+            <a href="https://groups.io/g/MMARC-JeffCity/ics/9508623/1996088380/feed.ics" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-brand-800 hover:bg-brand-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 transition-colors">
+                <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                Subscribe to Calendar
+            </a>
+        </div>
+
+        <!-- Calendar Container -->
+        <div class="p-6 sm:p-8">
+            <div id="calendar" class="min-h-[600px]"></div>
+        </div>
+    </div>
+</div>
+
+<!-- FullCalendar Dependencies -->
+<script src='https://cdn.jsdelivr.net/npm/ical.js@1.5.0/build/ical.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/icalendar@6.1.15/index.global.min.js'></script>
+
+<style>
+/* Base Brand Tweaks */
+.fc {
+    --fc-button-bg-color: #003366;
+    --fc-button-border-color: #003366;
+    --fc-button-hover-bg-color: #002244;
+    --fc-button-hover-border-color: #002244;
+    --fc-button-active-bg-color: #002244;
+    --fc-button-active-border-color: #002244;
+    --fc-event-bg-color: #003366;
+    --fc-event-border-color: #002244;
+}
+
+.fc-h-event .fc-event-main, .fc-v-event .fc-event-main {
+    color: #fff;
+    font-weight: 500;
+}
+
+.fc .fc-toolbar-title {
+    font-weight: 700;
+    color: #1f2937; /* Gray 900 */
+}
+
+/* Light mode specific touches */
+.fc-day-today {
+    background-color: #f3f4f6 !important; /* Gray 100 */
+}
+.fc-col-header-cell-cushion, 
+.fc-daygrid-day-number {
+    color: #374151; /* Gray 700 */
+    text-decoration: none;
+    font-weight: 600;
+}
+.fc-col-header-cell-cushion:hover, 
+.fc-daygrid-day-number:hover {
+    text-decoration: underline;
+    color: #003366;
+}
+
+/* Dark Mode Overrides */
+.dark .fc {
+    --fc-page-bg-color: #1f2937;          /* gray-800 */
+    --fc-neutral-bg-color: #374151;       /* gray-700 */
+    --fc-neutral-text-color: #d1d5db;     /* gray-300 */
+    --fc-border-color: #4b5563;           /* gray-600 */
+    --fc-event-bg-color: #3b82f6;         /* blue-500 for better visibility in dark mode */
+    --fc-event-border-color: #2563eb;     /* blue-600 */
+    --fc-list-event-hover-bg-color: #374151;
+}
+
+.dark .fc .fc-toolbar-title {
+    color: #f9fafb; /* Gray 50 */
+}
+
+.dark .fc-day-today {
+    background-color: #111827 !important; /* gray-900 */
+}
+
+.dark .fc-col-header-cell-cushion, 
+.dark .fc-daygrid-day-number,
+.dark .fc-list-event-title,
+.dark .fc-list-event-time,
+.dark .fc-list-day-text,
+.dark .fc-list-day-side-text {
+    color: #e5e7eb; /* gray-200 */
+}
+
+.dark .fc-col-header-cell-cushion:hover, 
+.dark .fc-daygrid-day-number:hover {
+    color: #60a5fa; /* blue-400 */
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        // Note: Using corsproxy.io because groups.io does not return Access-Control-Allow-Origin headers
+        var iCalUrl = 'https://corsproxy.io/?https://groups.io/g/MMARC-JeffCity/ics/9508623/1996088380/feed.ics';
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,listWeek'
+            },
+            initialView: 'dayGridMonth',
+            navLinks: true,      // can click day/week names to navigate views
+            businessHours: true, // display business hours
+            editable: false,     // read-only from iCal
+            height: 'auto',
+            events: {
+                url: iCalUrl,
+                format: 'ics'
+            },
+            // Spinner mapping
+            loading: function(isLoading) {
+                if (isLoading) {
+                    calendarEl.style.opacity = '0.5';
+                } else {
+                    calendarEl.style.opacity = '1';
+                }
+            },
+            eventClick: function(info) {
+                // Prettify default click behavior for accessibility
+                info.jsEvent.preventDefault();
+                if (info.event.url) {
+                    window.open(info.event.url, '_blank');
+                } else {
+                    var titleStr = info.event.title;
+                    var dateStr = info.event.start.toLocaleString();
+                    var descStr = info.event.extendedProps.description || "No further details provided.";
+                    alert(`${titleStr}\n${dateStr}\n\n${descStr}`);
+                }
+            }
+        });
+
+        calendar.render();
+    });
+</script>
