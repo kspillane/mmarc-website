@@ -112,8 +112,9 @@ permalink: /calendar/
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
 
-        // Note: Using corsproxy.io because groups.io does not return Access-Control-Allow-Origin headers
-        var iCalUrl = 'https://corsproxy.io/?https://groups.io/g/MMARC-JeffCity/ics/9508623/1996088380/feed.ics';
+        // Note: Using api.allorigins.win because groups.io does not return Access-Control-Allow-Origin headers
+        // corsproxy.io was returning rate limit blocks.
+        var iCalUrl = 'https://api.allorigins.win/raw?url=https://groups.io/g/MMARC-JeffCity/ics/9508623/1996088380/feed.ics';
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
             headerToolbar: {
