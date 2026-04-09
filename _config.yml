@@ -11,9 +11,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
-  projects:
+  activities:
     output: true
-    permalink: /projects/:slug/
+    permalink: /activities/:slug/
   operating:
     output: true
     permalink: /operating/:slug/
