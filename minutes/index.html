@@ -4,122 +4,133 @@ title: "Meeting Minutes Archive"
 permalink: /minutes/
 ---
 
-<div class="minutes-archive-container" style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
-  <header style="margin-bottom: 3rem; text-align: center;">
-    <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem;">Meeting Minutes</h1>
-    <p class="text-muted" style="font-size: 1.2rem;">Read historical and recent club meeting minutes dating back to 1997.</p>
-  </header>
-
-  {% assign current_year = "now" | date: "%Y" | plus: 0 %}
-  {% assign two_years_ago = current_year | minus: 2 %}
-  
-  {% assign minutes_by_year = site.minutes | group_by_exp: "item", "item.date | date: '%Y'" | reverse %}
-
-  <div class="recent-minutes" style="margin-bottom: 4rem;">
-    <h2 style="border-bottom: 2px solid #0d6efd; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">Recent Minutes</h2>
-    <div class="minutes-grid">
-      {% for year_group in minutes_by_year %}
-        {% assign group_year = year_group.name | plus: 0 %}
-        {% if group_year >= two_years_ago %}
-          {% for doc in year_group.items %}
-            <a href="{{ doc.url }}" class="minute-card">
-              <div class="minute-card-date">{{ doc.date | date: "%B %Y" }}</div>
-              <div class="minute-card-title">{{ doc.title }}</div>
-            </a>
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-    </div>
+<div class="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+  <div class="text-center mb-16">
+    <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl">Meeting Minutes</h1>
+    <p class="mt-4 text-xl text-gray-500 dark:text-gray-400">Historical & recent club meeting minutes dating back to 1997.</p>
   </div>
 
-  <div class="historical-minutes">
-    <h2 style="border-bottom: 2px solid #6c757d; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">Historical Archive</h2>
-    <p style="margin-bottom: 2rem;">Select a year to drill down into past minutes.</p>
+  {% assign current_year = "now" | date: "%Y" | plus: 0 %}
+  {% assign prior_year = current_year | minus: 1 %}
+  
+  {% assign minutes_by_year = site.minutes | group_by_exp: "item", "item.date | date: '%Y'" | sort: "name" | reverse %}
+
+  <div class="space-y-16">
+    {% assign archive_started = false %}
     
-    <div class="accordion" id="archiveAccordion">
-      {% for year_group in minutes_by_year %}
-        {% assign group_year = year_group.name | plus: 0 %}
-        {% if group_year < two_years_ago %}
-          <div class="accordion-item" style="margin-bottom: 0.5rem; border: 1px solid #dee2e6; border-radius: 4px;">
-            <h3 class="accordion-header" id="heading-{{ year_group.name }}" style="margin: 0;">
-              <button class="accordion-button collapsed" type="button" style="width: 100%; text-align: left; padding: 1rem; background: #f8f9fa; border: none; font-size: 1.2rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleAccordion('collapse-{{ year_group.name }}')">
-                <span>Archive: {{ year_group.name }}</span>
-                <span class="badge" style="background: #e9ecef; padding: 0.3rem 0.6rem; border-radius: 12px; font-size: 0.9rem; color: #495057;">{{ year_group.items.size }} documents</span>
-              </button>
-            </h3>
-            <div id="collapse-{{ year_group.name }}" class="accordion-collapse" style="display: none; padding: 1rem; background: white; border-top: 1px solid #dee2e6;">
-              <ul style="list-style: none; padding-left: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
-                {% for doc in year_group.items %}
-                  <li>
-                    <a href="{{ doc.url }}" style="display: block; padding: 0.8rem; background: #f1f3f5; border-radius: 4px; text-decoration: none; color: #212529; text-align: center; transition: background 0.2s; font-weight: 500;">
-                      {{ doc.date | date: "%B" }}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
+    {% for year_group in minutes_by_year %}
+      {% assign group_year = year_group.name | plus: 0 %}
+      
+      {% if group_year == current_year or group_year == prior_year %}
+        <!-- Recent Years (Current & Prior) -->
+        <section>
+          <div class="relative mb-8">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+              <div class="w-full border-t-2 border-brand-800 dark:border-blue-500"></div>
+            </div>
+            <div class="relative flex justify-start">
+              <span class="pr-6 bg-white dark:bg-gray-900 text-3xl font-extrabold text-brand-800 dark:text-blue-400 uppercase tracking-tight">
+                {{ year_group.name }}
+              </span>
             </div>
           </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {% assign items_descending = year_group.items | sort: "date" | reverse %}
+            {% for doc in items_descending %}
+              <a href="{{ doc.url | relative_url }}" class="group block p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg hover:border-brand-800 dark:hover:border-blue-400 transition-all duration-300">
+                <div class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">{{ doc.date | date: "%B" }}</div>
+                <div class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-brand-800 dark:group-hover:text-blue-400 transition-colors">{{ doc.title }}</div>
+              </a>
+            {% endfor %}
+          </div>
+        </section>
+
+      {% else %}
+        <!-- Archive Grid -->
+        {% if archive_started == false %}
+          {% assign archive_started = true %}
+          <section>
+            <div class="relative mb-10 mt-20">
+              <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                <div class="w-full border-t-2 border-gray-200 dark:border-gray-700"></div>
+              </div>
+              <div class="relative flex justify-center">
+                <span class="px-6 bg-white dark:bg-gray-900 text-2xl font-bold text-gray-600 dark:text-gray-300 tracking-wide uppercase">
+                  Historical Archive Grid
+                </span>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {% endif %}
-      {% endfor %}
-    </div>
+
+          <!-- Archive Flip Card -->
+          <div class="relative h-64 w-full perspective-1000 group" x-data="{ flipped: false }">
+            <div class="w-full h-full duration-700 transform-style-3d cursor-pointer rounded-2xl shadow-md hover:shadow-xl transition-shadow"
+                 :class="{ 'rotate-y-180': flipped }" @click="flipped = !flipped">
+              
+              <!-- Front of Card: Year -->
+              <div class="absolute w-full h-full backface-hidden flex flex-col items-center justify-center bg-gradient-to-br from-brand-800 to-brand-900 rounded-2xl">
+                <h3 class="text-6xl font-black text-white drop-shadow-md">{{ year_group.name }}</h3>
+                <div class="mt-6 flex items-center text-blue-200 text-sm font-medium tracking-wide uppercase opacity-80 group-hover:opacity-100 transition-opacity">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                  Click to Expand
+                </div>
+              </div>
+              
+              <!-- Back of Card: Months -->
+              <div class="absolute w-full h-full backface-hidden rotate-y-180 bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 flex flex-col p-5 overflow-hidden">
+                <h4 class="text-center font-extrabold text-xl mb-4 text-brand-800 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-3">{{ year_group.name }} Minutes</h4>
+                <div class="flex flex-col space-y-2 flex-grow overflow-y-auto custom-scrollbar pr-2">
+                  {% assign items_descending = year_group.items | sort: "date" | reverse %}
+                  {% for doc in items_descending %}
+                    <a href="{{ doc.url | relative_url }}" @click.stop class="block text-center py-2 px-3 text-sm font-semibold rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900 hover:text-brand-800 dark:hover:text-blue-100 text-gray-700 dark:text-gray-200 transition-colors shadow-sm">
+                      {{ doc.date | date: "%B" }}
+                    </a>
+                  {% endfor %}
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+        {% if forloop.last and archive_started %}
+            </div> <!-- Close Archive Grid -->
+          </section>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
 
-<script>
-function toggleAccordion(id) {
-  const el = document.getElementById(id);
-  if (el.style.display === 'none' || el.style.display === '') {
-    el.style.display = 'block';
-  } else {
-    el.style.display = 'none';
-  }
-}
-</script>
-
 <style>
-.minutes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
+/* Custom utility classes for 3D flip card */
+.perspective-1000 {
+  perspective: 1000px;
 }
-.minute-card {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  background: white;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+.transform-style-3d {
+  transform-style: preserve-3d;
 }
-.minute-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  border-color: #0d6efd;
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
-.minute-card:hover .minute-card-title {
-  color: #0d6efd;
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
-.minute-card-date {
-  font-size: 0.9rem;
-  color: #6c757d;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+
+/* Scrollbar styling for card back */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
 }
-.minute-card-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #212529;
-  transition: color 0.2s;
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
 }
-.accordion-button:hover {
-  background-color: #e9ecef !important;
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 10px;
 }
-.accordion-collapse a:hover {
-  background-color: #e2e6ea !important;
-  color: #0d6efd !important;
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
 }
 </style>
