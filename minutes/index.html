@@ -1,0 +1,125 @@
+---
+layout: default
+title: "Meeting Minutes Archive"
+permalink: /minutes/
+---
+
+<div class="minutes-archive-container" style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+  <header style="margin-bottom: 3rem; text-align: center;">
+    <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem;">Meeting Minutes</h1>
+    <p class="text-muted" style="font-size: 1.2rem;">Read historical and recent club meeting minutes dating back to 1997.</p>
+  </header>
+
+  {% assign current_year = "now" | date: "%Y" | plus: 0 %}
+  {% assign two_years_ago = current_year | minus: 2 %}
+  
+  {% assign minutes_by_year = site.minutes | group_by_exp: "item", "item.date | date: '%Y'" | reverse %}
+
+  <div class="recent-minutes" style="margin-bottom: 4rem;">
+    <h2 style="border-bottom: 2px solid #0d6efd; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">Recent Minutes</h2>
+    <div class="minutes-grid">
+      {% for year_group in minutes_by_year %}
+        {% assign group_year = year_group.name | plus: 0 %}
+        {% if group_year >= two_years_ago %}
+          {% for doc in year_group.items %}
+            <a href="{{ doc.url }}" class="minute-card">
+              <div class="minute-card-date">{{ doc.date | date: "%B %Y" }}</div>
+              <div class="minute-card-title">{{ doc.title }}</div>
+            </a>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="historical-minutes">
+    <h2 style="border-bottom: 2px solid #6c757d; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">Historical Archive</h2>
+    <p style="margin-bottom: 2rem;">Select a year to drill down into past minutes.</p>
+    
+    <div class="accordion" id="archiveAccordion">
+      {% for year_group in minutes_by_year %}
+        {% assign group_year = year_group.name | plus: 0 %}
+        {% if group_year < two_years_ago %}
+          <div class="accordion-item" style="margin-bottom: 0.5rem; border: 1px solid #dee2e6; border-radius: 4px;">
+            <h3 class="accordion-header" id="heading-{{ year_group.name }}" style="margin: 0;">
+              <button class="accordion-button collapsed" type="button" style="width: 100%; text-align: left; padding: 1rem; background: #f8f9fa; border: none; font-size: 1.2rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleAccordion('collapse-{{ year_group.name }}')">
+                <span>Archive: {{ year_group.name }}</span>
+                <span class="badge" style="background: #e9ecef; padding: 0.3rem 0.6rem; border-radius: 12px; font-size: 0.9rem; color: #495057;">{{ year_group.items.size }} documents</span>
+              </button>
+            </h3>
+            <div id="collapse-{{ year_group.name }}" class="accordion-collapse" style="display: none; padding: 1rem; background: white; border-top: 1px solid #dee2e6;">
+              <ul style="list-style: none; padding-left: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
+                {% for doc in year_group.items %}
+                  <li>
+                    <a href="{{ doc.url }}" style="display: block; padding: 0.8rem; background: #f1f3f5; border-radius: 4px; text-decoration: none; color: #212529; text-align: center; transition: background 0.2s; font-weight: 500;">
+                      {{ doc.date | date: "%B" }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleAccordion(id) {
+  const el = document.getElementById(id);
+  if (el.style.display === 'none' || el.style.display === '') {
+    el.style.display = 'block';
+  } else {
+    el.style.display = 'none';
+  }
+}
+</script>
+
+<style>
+.minutes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.minute-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+.minute-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-color: #0d6efd;
+}
+.minute-card:hover .minute-card-title {
+  color: #0d6efd;
+}
+.minute-card-date {
+  font-size: 0.9rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+.minute-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #212529;
+  transition: color 0.2s;
+}
+.accordion-button:hover {
+  background-color: #e9ecef !important;
+}
+.accordion-collapse a:hover {
+  background-color: #e2e6ea !important;
+  color: #0d6efd !important;
+}
+</style>

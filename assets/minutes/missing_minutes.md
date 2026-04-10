@@ -1,0 +1,62 @@
+# Missing/Unavailable Minutes
+
+- **2025**: Jul(PDF) (Failed to download https://www.mmccs.com/mmarc/minutes/2025/jul.pdf)
+- **2018**: No Jan Meeting
+- **2009**: July(PDF) /July(Microsoft Word) /July(Text) (Failed to download https://www.mmccs.com/mmarc/minutes/2009/july.pdf)
+- **2009**: June(PDF) /June(Microsoft Word) /June(Text) (Failed to download https://www.mmccs.com/mmarc/minutes/2009/june.pdf)
+- **2006**: Oct(PDF) /Oct(Microsoft Word) /Oct(Text) (Failed to download https://www.mmccs.com/mmarc/minutes/2006/oct.pdf)
+- **2006**: Sep(PDF) /Sep(Microsoft Word) /Sep(Text) (Failed to download https://www.mmccs.com/mmarc/minutes/2006/sep.pdf)
+- **2006**: Aug(PDF) /Aug(Microsoft Word) /Aug(Text) (Failed to download https://www.mmccs.com/mmarc/minutes/2006/aug.pdf)
+- **2006**: July(PDF) /July(Microsoft Word) /July(Text) (Failed to download https://www.mmccs.com/mmarc/minutes/2006/july.pdf)
+- **2006**: June(PDF) /June(Microsoft Word) /June(Text) (Failed to download https://www.mmccs.com/mmarc/minutes/2006/june.pdf)
+- **2006**: May(PDF) /May(Microsoft Word) /May(Text) (Failed to download https://www.mmccs.com/mmarc/minutes/2006/may.pdf)
+- **2006**: Apr(PDF) /Apr(Microsoft Word) /Apr(Text) (Failed to download https://www.mmccs.com/mmarc/minutes/2006/apr.pdf)
+- **2004**: March - No Minutes Published
+- **2004**: March - Dayton Hamvention￿ - No Minutes Published
+- **2002**: January(Text) /Microsoft Word (Failed to download https://www.mmccs.com/mmarc/minutes/2002/jan.doc)
+- **2002**: February(Text) /Microsoft Word (Failed to download https://www.mmccs.com/mmarc/minutes/2002/feb.doc)
+- **2002**: March(Text) /Microsoft Word (Failed to download https://www.mmccs.com/mmarc/minutes/2002/mar.doc)
+- **2002**: April(Text) /Microsoft Word (Failed to download https://www.mmccs.com/mmarc/minutes/2002/apr.doc)
+- **2002**: July(Text) /Microsoft Word (Failed to download https://www.mmccs.com/mmarc/minutes/2002/jul.doc)
+- **2002**: August(Text) /Microsoft Word (Failed to download https://www.mmccs.com/mmarc/minutes/2002/aug.doc)
+- **2000**: May (Only HTML available or no link)
+- **2000**: April (Only HTML available or no link)
+- **2000**: March (Only HTML available or no link)
+- **2000**: February - No Minutes Posted Yet
+- **2000**: January (Only HTML available or no link)
+- **1999**: December (Only HTML available or no link)
+- **1999**: November (Only HTML available or no link)
+- **1999**: October - No Minutes Posted Yet
+- **1999**: September (Only HTML available or no link)
+- **1999**: August (Only HTML available or no link)
+- **1999**: July (Only HTML available or no link)
+- **1999**: June - No Minutes Posted Yet
+- **1999**: May - No Minutes Posted Yet
+- **1999**: April - No Minutes Posted Yet
+- **1999**: March (Only HTML available or no link)
+- **1999**: Weather Spotter Training - No Minutes Published
+- **1999**: January (Only HTML available or no link)
+- **1998**: December (Only HTML available or no link)
+- **1998**: November (Only HTML available or no link)
+- **1998**: October (Only HTML available or no link)
+- **1998**: September (Only HTML available or no link)
+- **1998**: August (Only HTML available or no link)
+- **1998**: July (Only HTML available or no link)
+- **1998**: June (Only HTML available or no link)
+- **1998**: May (Only HTML available or no link)
+- **1998**: April (Only HTML available or no link)
+- **1998**: March (Only HTML available or no link)
+- **1998**: Great Chili Cookoff - No Minutes Published
+- **1998**: January (Only HTML available or no link)
+- **1997**: December (Only HTML available or no link)
+- **1997**: November (Only HTML available or no link)
+- **1997**: October (Only HTML available or no link)
+- **1997**: September (Only HTML available or no link)
+- **1997**: August (Only HTML available or no link)
+- **1997**: July (Only HTML available or no link)
+- **1997**: June (Only HTML available or no link)
+- **1997**: May (Only HTML available or no link)
+- **1997**: April (Only HTML available or no link)
+- **1997**: March (Only HTML available or no link)
+- **1997**: February (Only HTML available or no link)
+- **1997**: January (Only HTML available or no link)
