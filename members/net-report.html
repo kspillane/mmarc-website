@@ -38,7 +38,7 @@ permalink: /members/net-report.html
           <template x-for="(row, index) in rows" :key="row.id">
             <tr>
               <td class="px-4 py-2">
-                <input type="text" x-model="row.callsign" @change="fetchCallsignInfo(row)" maxlength="15" class="w-28 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm uppercase focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" placeholder="Callsign" />
+                <input type="text" :id="'callsign-' + row.id" x-model="row.callsign" @change="fetchCallsignInfo(row)" maxlength="15" class="w-28 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm uppercase focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" placeholder="Callsign" />
               </td>
               <td class="px-4 py-2">
                 <input type="text" :id="'name-' + row.id" x-model="row.name" maxlength="50" class="w-full border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" placeholder="Name" />
@@ -252,10 +252,18 @@ document.addEventListener('alpine:init', () => {
     },
 
     addRow(index = -1, silent = false) {
+      const newRow = this.createEmptyRow();
       if (index === -1) {
-        this.rows.push(this.createEmptyRow());
+        this.rows.push(newRow);
       } else {
-        this.rows.splice(index + 1, 0, this.createEmptyRow());
+        this.rows.splice(index + 1, 0, newRow);
+      }
+
+      if (!silent) {
+        this.$nextTick(() => {
+          const callsignInput = document.getElementById('callsign-' + newRow.id);
+          if (callsignInput) callsignInput.focus();
+        });
       }
     },
 
@@ -268,7 +276,7 @@ document.addEventListener('alpine:init', () => {
       const row = this.rows[index];
       // Only ask for confirmation if the row has some data
       if (row.callsign.trim() !== '' || row.name.trim() !== '' || row.location.trim() !== '') {
-        const displayName = [row.callsign.trim(), row.name.trim()].filter(Boolean).join(' ') || 'this entry';
+        const displayName = [row.callsign.trim().toUpperCase(), row.name.trim()].filter(Boolean).join(' ') || 'this entry';
         if (!confirm(`Are you sure you want to remove ${displayName}?`)) {
           return;
         }
