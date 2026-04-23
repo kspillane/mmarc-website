@@ -41,7 +41,7 @@ permalink: /members/net-report.html
                 <input type="text" x-model="row.callsign" @change="fetchCallsignInfo(row)" maxlength="15" class="w-28 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm uppercase focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" placeholder="Callsign" />
               </td>
               <td class="px-4 py-2">
-                <input type="text" x-model="row.name" maxlength="50" class="w-full border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" placeholder="Name" />
+                <input type="text" :id="'name-' + row.id" x-model="row.name" maxlength="50" class="w-full border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" placeholder="Name" />
               </td>
               <td class="px-4 py-2">
                 <input type="text" x-model="row.location" maxlength="50" class="w-full border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" placeholder="Location" />
@@ -53,7 +53,7 @@ permalink: /members/net-report.html
                 <input type="checkbox" x-model="row.traffic" class="h-4 w-4 text-brand-800 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-brand-800" />
               </td>
               <td class="px-4 py-2 text-center whitespace-nowrap">
-                <button @click="addRow(index)" type="button" class="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300 mx-1" title="Add Row Below">
+                <button :id="'add-row-' + row.id" @click="addRow(index)" type="button" class="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300 mx-1 focus:ring-2 focus:ring-brand-800 rounded" title="Add Row Below">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                   </svg>
@@ -292,29 +292,42 @@ document.addEventListener('alpine:init', () => {
       const call = row.callsign.trim().toUpperCase();
       if (!call) return;
       
+      let valid = false;
       try {
         const response = await fetch(`https://callook.info/${call}/json`);
-        if (!response.ok) return;
-        
-        const data = await response.json();
-        if (data.status === 'VALID') {
-          // Only populate if the user hasn't already typed something else
-          if (row.name.trim() === '' && data.name) {
-            // Capitalize properly if desired, or leave as provided by API
-            row.name = data.name;
-          }
-          
-          if (row.location.trim() === '' && data.address && data.address.line2) {
-            // Parse city from "CITY, ST ZIP"
-            const parts = data.address.line2.split(',');
-            if (parts.length > 0) {
-              row.location = parts[0].trim();
+        if (response.ok) {
+          const data = await response.json();
+          if (data.status === 'VALID') {
+            valid = true;
+            // Only populate if the user hasn't already typed something else
+            if (row.name.trim() === '' && data.name) {
+              row.name = data.name;
+            }
+            
+            if (row.location.trim() === '' && data.address && data.address.line2) {
+              const parts = data.address.line2.split(',');
+              if (parts.length > 0) {
+                row.location = parts[0].trim();
+              }
             }
           }
         }
       } catch (e) {
         console.error("Error fetching callsign info:", e);
       }
+
+      // Handle focus after fetch completes
+      this.$nextTick(() => {
+        if (valid) {
+          // Focus the add row button for this row
+          const btn = document.getElementById('add-row-' + row.id);
+          if (btn) btn.focus();
+        } else {
+          // Focus the name input for this row
+          const nameInput = document.getElementById('name-' + row.id);
+          if (nameInput) nameInput.focus();
+        }
+      });
     }
   }));
 });
