@@ -9,9 +9,17 @@ permalink: /members/net-report.html
 
   <!-- Edit View -->
   <div x-show="view === 'edit'" x-cloak>
-    <div class="mb-6">
-      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Date of Net</label>
-      <input type="date" x-model="netDate" class="border border-gray-300 dark:border-gray-600 rounded px-3 py-2 w-full max-w-xs focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" />
+    <div class="flex justify-between items-end mb-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Date of Net</label>
+        <input type="date" x-model="netDate" class="border border-gray-300 dark:border-gray-600 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" />
+      </div>
+      <button @click="clearAll" type="button" class="text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-medium text-sm flex items-center bg-red-50 dark:bg-red-900/20 px-3 py-2 rounded border border-red-200 dark:border-red-800 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+        </svg>
+        Clear All Data
+      </button>
     </div>
 
     <div class="overflow-x-auto mb-6 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700">
@@ -156,8 +164,59 @@ document.addEventListener('alpine:init', () => {
     rows: [],
 
     init() {
-      // Start with 1 empty row
+      this.loadState();
+      
+      // Auto-save when rows or netDate changes
+      this.$watch('rows', () => this.saveState(), { deep: true });
+      this.$watch('netDate', () => this.saveState());
+    },
+
+    saveState() {
+      const data = {
+        rows: this.rows,
+        netDate: this.netDate,
+        nextId: this.nextId,
+        timestamp: Date.now()
+      };
+      localStorage.setItem('netReportDraft', JSON.stringify(data));
+    },
+
+    loadState() {
+      const saved = localStorage.getItem('netReportDraft');
+      if (saved) {
+        try {
+          const data = JSON.parse(saved);
+          // 45 minutes = 45 * 60 * 1000 = 2700000 milliseconds
+          if (Date.now() - data.timestamp < 2700000) {
+            this.rows = data.rows || [];
+            this.netDate = data.netDate || new Date().toISOString().split('T')[0];
+            this.nextId = data.nextId || 1;
+            
+            // Ensure we always have at least one row
+            if (this.rows.length === 0) {
+              this.addRow(-1, true);
+            }
+            return;
+          } else {
+            // Expired cache
+            localStorage.removeItem('netReportDraft');
+          }
+        } catch (e) {
+          console.error("Error loading draft", e);
+        }
+      }
+      
+      // Start with 1 empty row if no valid save
       this.addRow(-1, true);
+    },
+
+    clearAll() {
+      if (confirm("Are you sure you want to clear ALL data? This action cannot be undone.")) {
+        this.rows = [];
+        this.nextId = 1;
+        this.addRow(-1, true);
+        localStorage.removeItem('netReportDraft');
+      }
     },
 
     get totalCheckins() {
@@ -209,7 +268,8 @@ document.addEventListener('alpine:init', () => {
       const row = this.rows[index];
       // Only ask for confirmation if the row has some data
       if (row.callsign.trim() !== '' || row.name.trim() !== '' || row.location.trim() !== '') {
-        if (!confirm("Are you sure you want to remove this row?")) {
+        const displayName = [row.callsign.trim(), row.name.trim()].filter(Boolean).join(' ') || 'this entry';
+        if (!confirm(`Are you sure you want to remove ${displayName}?`)) {
           return;
         }
       }
