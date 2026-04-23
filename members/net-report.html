@@ -1,0 +1,232 @@
+---
+layout: default
+title: ARES Net Report
+permalink: /members/net-report.html
+---
+
+<div class="max-w-4xl mx-auto py-8 px-4" x-data="netReportApp()">
+  <h1 class="text-3xl font-bold mb-6 text-brand-800 dark:text-white">ARES Weekly Net Report</h1>
+
+  <!-- Edit View -->
+  <div x-show="view === 'edit'" x-cloak>
+    <div class="mb-6">
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Date of Net</label>
+      <input type="date" x-model="netDate" class="border border-gray-300 dark:border-gray-600 rounded px-3 py-2 w-full max-w-xs focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" />
+    </div>
+
+    <div class="overflow-x-auto mb-6 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700">
+      <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-700/50">
+          <tr>
+            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Callsign</th>
+            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Name</th>
+            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Location</th>
+            <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">ARES</th>
+            <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Traffic</th>
+            <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+          <template x-for="(row, index) in rows" :key="row.id">
+            <tr>
+              <td class="px-4 py-2">
+                <input type="text" x-model="row.callsign" maxlength="15" class="w-28 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm uppercase focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" placeholder="Callsign" />
+              </td>
+              <td class="px-4 py-2">
+                <input type="text" x-model="row.name" maxlength="50" class="w-full border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" placeholder="Name" />
+              </td>
+              <td class="px-4 py-2">
+                <input type="text" x-model="row.location" maxlength="50" class="w-full border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-brand-800 dark:bg-gray-700 dark:text-white" placeholder="Location" />
+              </td>
+              <td class="px-4 py-2 text-center">
+                <input type="checkbox" x-model="row.ares" class="h-4 w-4 text-brand-800 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-brand-800" />
+              </td>
+              <td class="px-4 py-2 text-center">
+                <input type="checkbox" x-model="row.traffic" class="h-4 w-4 text-brand-800 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-brand-800" />
+              </td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">
+                <button @click="addRow(index)" type="button" class="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300 mx-1" title="Add Row Below">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                  </svg>
+                </button>
+                <button @click="removeRow(index)" type="button" class="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300 mx-1" title="Remove Row">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+      
+      <!-- Totals -->
+      <div class="px-4 py-3 bg-gray-50 dark:bg-gray-700/50 border-t border-gray-200 dark:border-gray-700 flex justify-between items-center text-sm font-medium text-gray-700 dark:text-gray-300">
+        <div>Total Check-ins: <span x-text="totalCheckins" class="text-brand-800 dark:text-brand-500 ml-1 font-bold text-lg"></span></div>
+        <div>Total ARES Members: <span x-text="totalARES" class="text-brand-800 dark:text-brand-500 ml-1 font-bold text-lg"></span></div>
+      </div>
+    </div>
+
+    <div class="flex justify-end mt-6">
+      <button @click="review" type="button" class="bg-brand-800 hover:bg-brand-900 text-white font-bold py-2 px-6 rounded shadow transition duration-150">
+        Review & Submit &rarr;
+      </button>
+    </div>
+  </div>
+
+  <!-- Review View -->
+  <div x-show="view === 'review'" x-cloak>
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6 border border-gray-200 dark:border-gray-700">
+      <h2 class="text-2xl font-bold mb-6 border-b border-gray-200 dark:border-gray-700 pb-2 dark:text-white">Net Report Summary</h2>
+      
+      <p class="mb-6 text-lg dark:text-gray-300"><strong>Date of Net:</strong> <span x-text="formattedDate" class="text-brand-800 dark:text-brand-500 font-medium ml-2"></span></p>
+
+      <div class="overflow-x-auto mb-6">
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-200 dark:border-gray-700">
+          <thead class="bg-gray-50 dark:bg-gray-700/50">
+            <tr>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">Callsign</th>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">Name</th>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">Location</th>
+              <th class="px-4 py-2 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">ARES</th>
+              <th class="px-4 py-2 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">Traffic</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-gray-800">
+            <template x-for="row in rows" :key="'review-'+row.id">
+              <tr x-show="row.callsign.trim() !== '' || row.name.trim() !== ''" class="dark:text-gray-300">
+                <td class="px-4 py-2 text-sm font-medium uppercase" x-text="row.callsign"></td>
+                <td class="px-4 py-2 text-sm" x-text="row.name"></td>
+                <td class="px-4 py-2 text-sm" x-text="row.location"></td>
+                <td class="px-4 py-2 text-sm text-center">
+                  <span x-show="row.ares" class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-600 rounded-full">Yes</span>
+                  <span x-show="!row.ares" class="text-gray-400">-</span>
+                </td>
+                <td class="px-4 py-2 text-sm text-center">
+                  <span x-show="row.traffic" class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-blue-100 bg-blue-600 rounded-full">Yes</span>
+                  <span x-show="!row.traffic" class="text-gray-400">-</span>
+                </td>
+              </tr>
+            </template>
+            <!-- Show a row if there are no entries at all -->
+            <tr x-show="totalCheckins === 0">
+              <td colspan="5" class="px-4 py-4 text-center text-gray-500 italic">No check-ins recorded.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flex flex-col space-y-2 text-lg dark:text-gray-300 bg-gray-50 dark:bg-gray-700/50 p-4 rounded border border-gray-200 dark:border-gray-700">
+        <div><strong>Total Check-ins:</strong> <span x-text="totalCheckins" class="text-brand-800 dark:text-brand-500 font-bold ml-2"></span></div>
+        <div><strong>Total ARES Members:</strong> <span x-text="totalARES" class="text-brand-800 dark:text-brand-500 font-bold ml-2"></span></div>
+      </div>
+    </div>
+
+    <!-- The actual form that will be submitted -->
+    <form action="#" method="POST" @submit.prevent="submitForm">
+      <!-- Hidden inputs to submit the data, in reality you'd serialize the rows -->
+      <input type="hidden" name="netDate" :value="netDate" />
+      <input type="hidden" name="payload" :value="JSON.stringify(rows.filter(r => r.callsign.trim() !== '' || r.name.trim() !== ''))" />
+      
+      <div class="flex justify-between items-center mt-8">
+        <button @click="view = 'edit'" type="button" class="text-brand-800 dark:text-brand-400 hover:text-brand-900 dark:hover:text-brand-300 font-medium flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Edit
+        </button>
+        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded shadow-lg transition duration-150 text-lg flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Submit Report
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('netReportApp', () => ({
+    view: 'edit',
+    netDate: new Date().toISOString().split('T')[0],
+    nextId: 1,
+    rows: [],
+
+    init() {
+      // Start with 1 empty row
+      this.addRow(-1, true);
+    },
+
+    get totalCheckins() {
+      // Count rows that have at least a callsign or name
+      return this.rows.filter(r => r.callsign.trim() !== '' || r.name.trim() !== '').length;
+    },
+
+    get totalARES() {
+      // Count rows that have ARES checked AND have some identifying info
+      return this.rows.filter(r => (r.callsign.trim() !== '' || r.name.trim() !== '') && r.ares).length;
+    },
+
+    get formattedDate() {
+      if (!this.netDate) return '';
+      // Parse as local date to prevent timezone shift issues
+      const parts = this.netDate.split('-');
+      if (parts.length === 3) {
+        const d = new Date(parts[0], parts[1] - 1, parts[2]);
+        return d.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+      }
+      return this.netDate;
+    },
+
+    createEmptyRow() {
+      return {
+        id: this.nextId++,
+        callsign: '',
+        name: '',
+        location: '',
+        ares: false,
+        traffic: false
+      };
+    },
+
+    addRow(index = -1, silent = false) {
+      if (index === -1) {
+        this.rows.push(this.createEmptyRow());
+      } else {
+        this.rows.splice(index + 1, 0, this.createEmptyRow());
+      }
+    },
+
+    removeRow(index) {
+      if (this.rows.length <= 1) {
+        alert("You must have at least one row.");
+        return;
+      }
+      
+      const row = this.rows[index];
+      // Only ask for confirmation if the row has some data
+      if (row.callsign.trim() !== '' || row.name.trim() !== '' || row.location.trim() !== '') {
+        if (!confirm("Are you sure you want to remove this row?")) {
+          return;
+        }
+      }
+      
+      this.rows.splice(index, 1);
+    },
+
+    review() {
+      this.view = 'review';
+      window.scrollTo(0, 0);
+    },
+
+    submitForm() {
+      // Placeholder for form submission
+      alert('Form submitted successfully! (This is a placeholder action)');
+      // Reset form logic would go here
+    }
+  }));
+});
+</script>
