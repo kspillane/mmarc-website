@@ -52,7 +52,7 @@ permalink: /resources/
                 <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">K0ETY</span>
             </div>
             <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                <li><strong>Location:</strong> Linn, MO (MSHP Tower)</li>
+                <li><strong>Location:</strong> Linn, MO</li>
                 <li><strong>Mode:</strong> Analog FM</li>
                 <li><strong>Tone:</strong> 127.3 Hz</li>
                 <li><strong>Sponsor:</strong> Mid-MO ARC</li>
@@ -444,19 +444,40 @@ permalink: /resources/
     </div>
 
     <h2>Missouri Emergency Packet Network (MEPN) & Winlink</h2>
-    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">The Missouri Emergency Packet Network provides robust, digital message routing (including Winlink Global Radio Email) for emergency management and daily use. It operates using standard 1200 baud AX.25 packet radio.</p>
+    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+        While originally designed as a 2M to 6M backbone system linked across the state, implementation stalled on the loss of the local site in St. Louis. However, the system currently provides a valuable digipeater link to the K0SI-10 Winlink Packet node in Columbia.<br><br>
+        Operates using standard 1200 baud AX.25 packet radio. IE: K0SI-10 via MJEF
+    </p>
 
-    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-indigo-500 my-8 not-prose">
-        <div class="flex justify-between items-start">
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white">K0SI Winlink Gateway</h3>
-            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">145.010 MHz</span>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose my-8">
+        <!-- AA0RC Wide Area Winlink Gateway -->
+        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-indigo-500">
+            <div class="flex justify-between items-start">
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">AA0RC Winlink Gateway</h3>
+                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">145.030 MHz</span>
+            </div>
+            <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
+                <li><strong>Node Callsign:</strong> AA0RC</li>
+                <li><strong>Location:</strong> Mexico, MO</li>
+                <li><strong>Protocol:</strong> VARA FM</li>
+                <li><strong>Services:</strong> Wide Area RMS Gateway, easily worked with 5W from Jefferson City</li>
+            </ul>
+            <p class="mt-4 text-xs text-gray-500 italic">Provides improved speed local and regional access to the Winlink email system. Maintained by Audrain Emergency Communications, Inc.</p>
         </div>
-        <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-            <li><strong>Node Callsign:</strong> K0SI-10</li>
-            <li><strong>Location:</strong> Columbia, MO</li>
-            <li><strong>Protocol:</strong> 1200 Baud Packet (AX.25)</li>
-            <li><strong>Services:</strong> Winlink RMS / MEPN Digipeater</li>
-        </ul>
-        <p class="mt-4 text-xs text-gray-500 italic">Provides local and regional access to the Winlink email system. Maintained by the Central Missouri Radio Association.</p>
+
+        <!-- K0SI Winlink Gateway -->
+        <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-indigo-500">
+            <div class="flex justify-between items-start">
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">K0SI Winlink Gateway</h3>
+                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">145.010 MHz</span>
+            </div>
+            <ul class="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
+                <li><strong>Node Callsign:</strong> K0SI-10</li>
+                <li><strong>Location:</strong> Columbia, MO</li>
+                <li><strong>Protocol:</strong> Standard 1200 Baud Packet (AX.25)</li>
+                <li><strong>Services:</strong> Winlink RMS Gateway</li>
+            </ul>
+            <p class="mt-4 text-xs text-gray-500 italic">Provides local and regional access to the Winlink email system. Maintained by the Central Missouri Radio Association.</p>
+        </div>
     </div>
 </div>
