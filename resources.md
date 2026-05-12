@@ -444,11 +444,6 @@ permalink: /resources/
     </div>
 
     <h2>Missouri Emergency Packet Network (MEPN) & Winlink</h2>
-    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
-        While originally designed as a 2M to 6M backbone system linked across the state, implementation stalled on the loss of the local site in St. Louis. However, the system currently provides a valuable digipeater link to the K0SI-10 Winlink Packet node in Columbia.<br><br>
-        Operates using standard 1200 baud AX.25 packet radio. IE: K0SI-10 via MJEF
-    </p>
-
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose my-8">
         <!-- AA0RC Wide Area Winlink Gateway -->
         <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-indigo-500">
