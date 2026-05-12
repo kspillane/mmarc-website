@@ -6,12 +6,16 @@ permalink: /new-hams/
 
 <div class="max-w-4xl mx-auto space-y-6" x-data="{ active: 1 }">
 
+    <div class="text-center mb-10 pt-4">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">What is Amateur Radio?</h1>
+    </div>
+
     <!-- Introduction -->
     <div
         class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
         <button @click="active = (active === 1 ? null : 1)"
             class="w-full flex items-center justify-between p-6 md:p-8 focus:outline-none text-left bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-            <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white m-0">What is Amateur Radio?</h2>
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white m-0">What is HAM Radio?</h2>
             <svg :class="{'rotate-180': active === 1}"
                 class="w-6 h-6 transform transition-transform duration-300 text-gray-500" fill="none"
                 stroke="currentColor" viewBox="0 0 24 24">
