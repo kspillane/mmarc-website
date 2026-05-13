@@ -16,5 +16,11 @@ permalink: /solar-weather/
                 <img src="https://www.hamqsl.com/solar101vhf.php" alt="Solar-Terrestrial Data" class="rounded-xl shadow-md border border-gray-200 dark:border-gray-600">
             </a>
         </div>
+
+        <div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700 max-w-2xl mx-auto">
+            <p class="text-gray-600 dark:text-gray-300 italic text-sm">
+                Not sure what this information means? <a href="{{ '/new-hams/' | relative_url }}" class="text-brand-800 dark:text-brand-400 font-bold hover:underline">Attend our next licensing class and upgrade to a General License</a> to learn about how the sun and space weather impact radio signal propagation.
+            </p>
+        </div>
     </div>
 </div>
