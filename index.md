@@ -47,7 +47,7 @@ title: Home
             </a>
             <div class="mt-4 border-t border-brand-700 pt-4">
                  <h4 class="text-xs font-semibold tracking-wider text-brand-200 uppercase mb-1">Mid MO ARC Weekly Net</h4>
-                 <p class="text-sm">Wednesdays @ 8:00 PM CT<br>147.000 (-) / 442.150 (+) 127.3 PL Tone</p>
+                 <p class="text-sm">Wednesdays @ 8:00 PM CT<br>147.000 (-) / 442.150 (+) / 145.390 (-) 127.3 PL Tone</p>
             </div>
         </div>
     </div>
@@ -55,10 +55,9 @@ title: Home
 
 <!-- Row 2: Resources, New to Radio, About -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-    <!-- Resources -->
-    <a href="{{ '/resources/' | relative_url }}" class="group bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <!-- Why Join Us -->
+    <a href="{{ '/why-join/' | relative_url }}" class="group bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
         <div class="h-48 relative">
-             <!-- Placeholder image - replace with actual resource image -->
               <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
                   <svg class="h-16 w-16 text-white opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
@@ -66,8 +65,8 @@ title: Home
               </div>
         </div>
         <div class="p-6">
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-brand-800 dark:group-hover:text-brand-400">Radio Resources</h3>
-            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Frequencies, repeaters, and area nets.</p>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-brand-800 dark:group-hover:text-brand-400">Why Join Us?</h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Learn about our club and why joining is a benefit.</p>
         </div>
     </a>
 
@@ -119,7 +118,7 @@ title: Home
                 Explore recurring club activities.
             </p>
             <ul class="space-y-2">
-                {% for activity in site.activities limit:2 %}
+                {% for activity in site.activities limit:5 %}
                 <li class="text-sm text-brand-700 dark:text-brand-400 hover:underline">{{ activity.title }}</li>
                 {% endfor %}
             </ul>
@@ -141,10 +140,10 @@ title: Home
                 Latest announcements and club updates.
             </p>
              <ul class="space-y-2">
-                {% for post in site.posts limit:2 %}
+                {% for post in site.posts limit:5 %}
                 <li class="text-sm text-brand-700 dark:text-brand-400 hover:underline">
                     <span class="text-gray-400 text-xs mr-1">{{ post.date | date: "%b %d" }}</span>
-                    {{ post.title }}
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </li>
                 {% endfor %}
             </ul>

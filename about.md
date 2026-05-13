@@ -72,6 +72,11 @@ managers:
       The Mid-MO Amateur Radio Club is a non-profit organization dedicated to the promotion of Amateur Radio used for emergency communication, experimentation, and social interaction.
     </p>
 
+    <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white mt-6">Why Join Us?</h3>
+    <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-400">
+      <a href="{{ '/why-join/' | relative_url }}" class="text-brand-800 dark:text-brand-400 hover:underline font-medium">Learn more about our club and what we do, and why joining an amateur radio club is a benefit.</a>
+    </p>
+
     <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white mt-6">Mission Statement</h3>
     <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-400">
       Advancing amateur radio through community engagement, technical education, and emergency preparedness. We empower individuals to master the airwaves and serve our community through the power of wireless technology.
@@ -84,12 +89,12 @@ managers:
         <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-md">
           <div class="text-sm font-semibold text-brand-800 dark:text-brand-400">MidMoARC Special Event Callsign</div>
           <div class="text-lg font-bold text-gray-900 dark:text-white my-1">NØSS</div>
-          <div class="text-xs text-gray-500 dark:text-gray-400 italic">In Memory of Tom Hammond</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400 italic">In Memory of Tom Hammond (SK)<br>Kent Trimble, K9ZTV, Trustee</div>
         </div>
         <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-md">
           <div class="text-sm font-semibold text-brand-800 dark:text-brand-400">MidMoARC Repeater Callsign</div>
           <div class="text-lg font-bold text-gray-900 dark:text-white my-1">KØETY</div>
-          <div class="text-xs text-gray-500 dark:text-gray-400 italic">In Memory of Don Dulle SK</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400 italic">In Memory of Don Dulle (SK)<br>Jim Biggerstaff, N0TKN, Trustee</div>
         </div>
       </div>
     </div>
