@@ -87,12 +87,12 @@ managers:
       <h4 class="text-md leading-5 font-medium text-gray-900 dark:text-white mb-3">Club Callsigns</h4>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-md">
-          <div class="text-sm font-semibold text-brand-800 dark:text-brand-400">MidMoARC Special Event Callsign</div>
+          <div class="text-sm font-semibold text-brand-800 dark:text-brand-400">Mid-MO ARC Special Event Callsign</div>
           <div class="text-lg font-bold text-gray-900 dark:text-white my-1">NØSS</div>
           <div class="text-xs text-gray-500 dark:text-gray-400 italic">In Memory of Tom Hammond (SK)<br>Kent Trimble, K9ZTV, Trustee</div>
         </div>
         <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-md">
-          <div class="text-sm font-semibold text-brand-800 dark:text-brand-400">MidMoARC Repeater Callsign</div>
+          <div class="text-sm font-semibold text-brand-800 dark:text-brand-400">Mid-MO ARC Repeater Callsign</div>
           <div class="text-lg font-bold text-gray-900 dark:text-white my-1">KØETY</div>
           <div class="text-xs text-gray-500 dark:text-gray-400 italic">In Memory of Don Dulle (SK)<br>Jim Biggerstaff, N0TKN, Trustee</div>
         </div>

@@ -444,6 +444,16 @@ permalink: /resources/
     </div>
 
     <h2>Missouri Emergency Packet Network (MEPN) & Winlink</h2>
+    
+    <div class="text-gray-700 dark:text-gray-300 mb-8">
+        <p class="mb-4">
+            The Missouri Emergency Packet Network (MEPN) was originally envisioned as a comprehensive 2-meter to 6-meter backbone system linking stations across the state. While the statewide network evolved differently than initially planned, our local MEPN infrastructure remains an essential regional asset. Today, it provides a highly valuable digipeater link to the K0SI-10 Winlink node in Columbia, helping bridge our community to the broader Winlink network.
+        </p>
+        <p>
+            The system operates using standard 1200 baud AX.25 packet radio. As an example, you can connect to the Columbia node using the path: <strong>K0SI-10 via MJEF</strong>.
+        </p>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose my-8">
         <!-- AA0RC Wide Area Winlink Gateway -->
         <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border-t-4 border-indigo-500">
