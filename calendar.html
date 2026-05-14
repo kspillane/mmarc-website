@@ -114,7 +114,7 @@ permalink: /calendar/
 
         // Restoring CORS proxy to allow browser to fetch the ICS file
         var originalUrl = 'https://groups.io/g/MMARC-JeffCity/ics/9508623/1996088380/feed.ics';
-        var iCalUrl = 'https://corsproxy.io/?' + encodeURIComponent(originalUrl);
+        var iCalUrl = 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(originalUrl);
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
             headerToolbar: {
