@@ -104,37 +104,46 @@ title: Home
 <!-- Row 3: Projects, News, Community Service -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <!-- Activities -->
-    <a href="{{ '/activities/' | relative_url }}" class="group bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-        <div class="p-6">
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden flex flex-col h-full">
+        <div class="p-6 flex-grow">
             <div class="flex items-center mb-4">
                  <div class="p-2 bg-orange-100 dark:bg-orange-900 rounded-lg text-orange-600 dark:text-orange-300">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                     </svg>
                  </div>
-                 <h3 class="ml-3 text-lg font-bold text-gray-900 dark:text-white">Club Activities</h3>
+                 <h3 class="ml-3 text-lg font-bold text-gray-900 dark:text-white">
+                     <a href="{{ '/activities/' | relative_url }}" class="hover:text-brand-800 dark:hover:text-brand-400">Club Activities</a>
+                 </h3>
             </div>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
                 Explore recurring club activities.
             </p>
             <ul class="space-y-2">
                 {% for activity in site.activities limit:5 %}
-                <li class="text-sm text-brand-700 dark:text-brand-400 hover:underline">{{ activity.title }}</li>
+                <li class="text-sm text-brand-700 dark:text-brand-400 hover:underline">
+                    <a href="{{ activity.url | relative_url }}">{{ activity.title }}</a>
+                </li>
                 {% endfor %}
             </ul>
         </div>
-    </a>
+        <div class="bg-gray-50 dark:bg-gray-700/50 px-6 py-3 border-t border-gray-100 dark:border-gray-700 mt-auto">
+            <a href="{{ '/activities/' | relative_url }}" class="text-sm font-medium text-brand-800 dark:text-brand-400 hover:underline">View all activities &rarr;</a>
+        </div>
+    </div>
 
     <!-- News -->
-    <a href="{{ '/blog/' | relative_url }}" class="group bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-         <div class="p-6">
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden flex flex-col h-full">
+         <div class="p-6 flex-grow">
             <div class="flex items-center mb-4">
                  <div class="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg text-blue-600 dark:text-blue-300">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                     </svg>
                  </div>
-                 <h3 class="ml-3 text-lg font-bold text-gray-900 dark:text-white">News & Events</h3>
+                 <h3 class="ml-3 text-lg font-bold text-gray-900 dark:text-white">
+                     <a href="{{ '/blog/' | relative_url }}" class="hover:text-brand-800 dark:hover:text-brand-400">News & Events</a>
+                 </h3>
             </div>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
                 Latest announcements and club updates.
@@ -148,24 +157,32 @@ title: Home
                 {% endfor %}
             </ul>
         </div>
-    </a>
+        <div class="bg-gray-50 dark:bg-gray-700/50 px-6 py-3 border-t border-gray-100 dark:border-gray-700 mt-auto">
+            <a href="{{ '/blog/' | relative_url }}" class="text-sm font-medium text-brand-800 dark:text-brand-400 hover:underline">View all news &rarr;</a>
+        </div>
+    </div>
 
     <!-- Community Service -->
-    <a href="{{ '/outreach/' | relative_url }}" class="group bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-         <div class="p-6">
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden flex flex-col h-full">
+         <div class="p-6 flex-grow">
              <div class="flex items-center mb-4">
                  <div class="p-2 bg-red-100 dark:bg-red-900 rounded-lg text-red-600 dark:text-red-300">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                  </div>
-                 <h3 class="ml-3 text-lg font-bold text-gray-900 dark:text-white">Outreach</h3>
+                 <h3 class="ml-3 text-lg font-bold text-gray-900 dark:text-white">
+                     <a href="{{ '/outreach/' | relative_url }}" class="hover:text-brand-800 dark:hover:text-brand-400">Outreach</a>
+                 </h3>
             </div>
             <p class="text-sm text-gray-500 dark:text-gray-400">
                 Public service, emergency comms, and education.
             </p>
         </div>
-    </a>
+        <div class="bg-gray-50 dark:bg-gray-700/50 px-6 py-3 border-t border-gray-100 dark:border-gray-700 mt-auto">
+            <a href="{{ '/outreach/' | relative_url }}" class="text-sm font-medium text-brand-800 dark:text-brand-400 hover:underline">Learn about our outreach &rarr;</a>
+        </div>
+    </div>
 </div>
 
 <script>
