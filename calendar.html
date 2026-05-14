@@ -112,8 +112,9 @@ permalink: /calendar/
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
 
-        // Temporarily testing without corswrapper per user request
-        var iCalUrl = 'https://groups.io/g/MMARC-JeffCity/ics/9508623/1996088380/feed.ics';
+        // Restoring CORS proxy to allow browser to fetch the ICS file
+        var originalUrl = 'https://groups.io/g/MMARC-JeffCity/ics/9508623/1996088380/feed.ics';
+        var iCalUrl = 'https://corsproxy.io/?' + encodeURIComponent(originalUrl);
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
             headerToolbar: {
