@@ -440,6 +440,15 @@ permalink: /resources/
                     <span class="mt-2 sm:mt-0 text-sm font-semibold text-orange-600 dark:text-orange-400">Sundays @ 2:00 PM</span>
                 </div>
             </li>
+            <li class="p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+                    <div>
+                        <h4 class="text-base font-bold text-gray-900 dark:text-white">Missouri Section Net (MON)</h4>
+                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">3.585 MHz &mdash; National Traffic System</p>
+                    </div>
+                    <span class="mt-2 sm:mt-0 text-sm font-semibold text-orange-600 dark:text-orange-400">Daily @ 6:30 PM & 9:45 PM</span>
+                </div>
+            </li>
         </ul>
     </div>
 
