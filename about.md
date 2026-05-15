@@ -50,7 +50,7 @@ tech_committee:
 managers:
   - name: "Kent Trimble"
     callsign: "K9ZTV"
-    role: "Special Event Coordinator"
+    role: "Special Event & Morse Code Class Coordinator"
   - name: "Stephen Hick"
     callsign: "WWØG"
     role: "2 Meter Net Manager"

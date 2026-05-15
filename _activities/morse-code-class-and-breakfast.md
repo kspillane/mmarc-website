@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "CW Class and Breakfast"
+title: "Morse Code Class and Breakfast"
 ---
 
-Join us every Saturday morning for breakfast and a Morse code (CW) class!
+Join us every Saturday morning for breakfast and a Morse code class!
 
 - **8:00 AM** - Breakfast
 - **9:00 AM** - Morse Code Class
