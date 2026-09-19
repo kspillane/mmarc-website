@@ -16,3 +16,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 - **GitHub Pages Jekyll Build**: Added `exclude` list in [`_config.yml`](_config.yml) for repository markdown/config files (`AGENTS.md`, `CHANGELOG.md`, `README.md`, `Gemfile`, `Gemfile.lock`, `vendor`) and escaped Liquid template examples in `AGENTS.md` to prevent Liquid syntax parsing errors under GitHub Pages' `jekyll-optional-front-matter` plugin.
 
+### Security
+- **Reverse Tabnabbing Mitigation**: Added `rel="noopener noreferrer"` to all external links opening in new browser tabs (`target="_blank"`) across [`index.md`](index.md), [`members/lookup.html`](members/lookup.html), and [`resources.md`](resources.md).
+- **Obsolete File Removal**: Removed deprecated and unreferenced backup file `index.html.old` to reduce attack surface and eliminate outdated code.

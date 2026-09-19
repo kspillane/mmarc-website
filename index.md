@@ -42,7 +42,7 @@ title: Home
             </p>
         </div>
         <div class="mt-6">
-             <a href="https://www.google.com/maps/search/?api=1&query=350+E+High+St,+Jefferson+City,+MO+65101" target="_blank" class="inline-flex items-center text-sm font-medium text-white hover:text-brand-200">
+             <a href="https://www.google.com/maps/search/?api=1&query=350+E+High+St,+Jefferson+City,+MO+65101" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-white hover:text-brand-200">
                 Get Directions &rarr;
             </a>
             <div class="mt-4 border-t border-brand-700 pt-4">
