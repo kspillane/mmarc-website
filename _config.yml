@@ -27,3 +27,11 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+exclude:
+  - AGENTS.md
+  - CHANGELOG.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

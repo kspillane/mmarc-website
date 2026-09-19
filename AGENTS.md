@@ -18,7 +18,7 @@ This document serves as an operational guide for LLM coding agents and developer
 | Layer | Technology | Details |
 | :--- | :--- | :--- |
 | **Static Site Generator** | **Jekyll** (Ruby) | Standard Jekyll static site engine. |
-| **Templating Engine** | **Liquid** | Jekyll's default templating system (`{{ ... }}`, `{% ... %}`). |
+| **Templating Engine** | **Liquid** | Jekyll's default templating system. |
 | **CSS Framework** | **Tailwind CSS** | Loaded via CDN (`https://cdn.tailwindcss.com?plugins=typography`) in `_includes/head.html`. |
 | **JavaScript / State** | **Alpine.js** (v3) | Loaded via CDN (`jsdelivr`) for mobile navigation, dark mode toggling, and interactive apps. |
 | **Hosting & Deployment** | **GitHub Pages** | Built automatically upon push to default branch; custom domain configured via `CNAME` (`k0ety.net`). |
@@ -172,8 +172,8 @@ Configured in `_includes/head.html` via the Tailwind CDN configuration:
 ## 7. Crucial Guidelines for AI Agents
 
 1. **Always Use `relative_url` for Links and Assets**:
-   - Internal links: `{{ '/minutes/' | relative_url }}`
-   - Images/CSS: `{{ '/assets/images/logo.png' | relative_url }}`
+   - Internal links: `{% raw %}{{ '/minutes/' | relative_url }}{% endraw %}`
+   - Images/CSS: `{% raw %}{{ '/assets/images/logo.png' | relative_url }}{% endraw %}`
    - *Do NOT hardcode root-relative paths like `/assets/...` directly without the Liquid filter*, as it ensures proper routing across GitHub Pages subpaths and custom domains.
 
 2. **Preserve the `n0ss/` Directory**:
