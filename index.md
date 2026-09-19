@@ -46,8 +46,7 @@ title: Home
                 Get Directions &rarr;
             </a>
             <div class="mt-4 border-t border-brand-700 pt-4">
-                 <h4 class="text-xs font-semibold tracking-wider text-brand-200 uppercase mb-1">Mid MO ARC Weekly Net</h4>
-                 <p class="text-sm">Wednesdays @ 8:00 PM CT<br>147.000 (-) / 442.150 (+) / 145.390 (-) 127.3 PL Tone</p>
+                <script async src="https://eocampaign1.com/form/0fbd8966-b469-11f1-a682-5b9e421e17cb.js" data-form="0fbd8966-b469-11f1-a682-5b9e421e17cb"></script>
             </div>
         </div>
     </div>
