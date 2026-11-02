@@ -17,5 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **GitHub Pages Jekyll Build**: Added `exclude` list in [`_config.yml`](_config.yml) for repository markdown/config files (`AGENTS.md`, `CHANGELOG.md`, `README.md`, `Gemfile`, `Gemfile.lock`, `vendor`) and escaped Liquid template examples in `AGENTS.md` to prevent Liquid syntax parsing errors under GitHub Pages' `jekyll-optional-front-matter` plugin.
 
 ### Security
+- **Meeting Minutes PII Sanitization**: Redacted personal email addresses, personal phone numbers, and individual residential addresses across 78 Markdown minutes files in `_minutes/`, 68 PDF files, and 10 Word (`.doc`) files in `assets/minutes/` while preserving names, call signs, club mailing addresses, and public agency/venue addresses.
+- **Unreferenced Archive Cleanup**: Removed the redundant 39 MB `assets/minutes.zip` archive from the repository and excluded `assets/minutes/missing_minutes.md` in [`_config.yml`](_config.yml).
 - **Reverse Tabnabbing Mitigation**: Added `rel="noopener noreferrer"` to all external links opening in new browser tabs (`target="_blank"`) across [`index.md`](index.md), [`members/lookup.html`](members/lookup.html), and [`resources.md`](resources.md).
 - **Obsolete File Removal**: Removed deprecated and unreferenced backup file `index.html.old` to reduce attack surface and eliminate outdated code.

@@ -35,3 +35,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - assets/minutes/missing_minutes.md
