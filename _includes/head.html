@@ -6,6 +6,9 @@
   <meta name="description"
     content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="theme-color" content="#003366">
+  {% if page.url contains '/members/' or page.url contains '/minutes/' or page.collection == 'minutes' %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
   <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
 
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>

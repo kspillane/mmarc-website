@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **Root `robots.txt` & Noindex Meta Tags**: Added [`robots.txt`](robots.txt) and conditional `noindex, nofollow` meta tags in [`_includes/head.html`](_includes/head.html) to prevent search engines from crawling or indexing `/members/`, `/minutes/`, and `/assets/minutes/`.
 - **Public Website Change History (`/changelog/`) & Footer Update Link**: Added [`_data/changelog.yml`](_data/changelog.yml) and [`changelog.html`](changelog.html) displaying a sanitized, plain-English change history of the site, linked via `"Site last updated on [DATE]"` below the copyright notice in [`_includes/footer.html`](_includes/footer.html).
 - **2026 Meeting Minutes (Jan, Jul, Aug, Sep)**: Imported and verified the official January, July, August, and September 2026 meeting minutes PDFs (`assets/minutes/2026_*.pdf`) and Markdown archive pages (`_minutes/2026-*-minutes.md`), replacing the January 2026 placeholder stub.
 - **EmailOctopus Newsletter Signup Form**: Embedded the EmailOctopus signup form script into the site footer ([`_includes/footer.html`](_includes/footer.html)) replacing the static newsletter signup link to allow visitors to subscribe for upcoming events and training notifications.

@@ -63,6 +63,7 @@ mmarc-website/
 ├── Gemfile                # Ruby gem dependencies
 ├── Gemfile.lock           # Locked gem versions
 ├── CNAME                  # Custom domain configuration (k0ety.net)
+├── robots.txt             # Search engine crawler rules (disallows /members/, /minutes/, /assets/minutes/)
 ├── manifest.json          # Web app manifest for PWA capabilities
 ├── sw.js                  # Service worker for offline caching
 └── README.md              # Human-facing project documentation

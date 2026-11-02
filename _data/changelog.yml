@@ -1,4 +1,9 @@
 - date: "2026-11-02"
+  time: "07:25 PM"
+  commit: "chore: configure search engine crawler rules in robots.txt"
+  summary: "Updated search engine indexing settings to focus search results on main public club pages."
+
+- date: "2026-11-02"
   time: "06:58 PM"
   commit: "feat: add website change history page and last-updated footer link"
   summary: "Added a public Website Change History page and a 'Site last updated on' link in the footer so visitors can see recent updates."
