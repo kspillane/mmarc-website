@@ -1,0 +1,134 @@
+- date: "2026-11-02"
+  time: "06:58 PM"
+  commit: "feat: add website change history page and last-updated footer link"
+  summary: "Added a public Website Change History page and a 'Site last updated on' link in the footer so visitors can see recent updates."
+
+- date: "2026-11-02"
+  time: "06:50 PM"
+  commit: "feat(minutes): add Jan, Jul, Aug, and Sep 2026 meeting minutes"
+  summary: "Published the official January, July, August, and September 2026 club meeting minutes to the archive."
+
+- date: "2026-11-02"
+  time: "06:25 PM"
+  commit: "chore(minutes): standardize meeting minutes archive and clean up repository assets"
+  summary: "Standardized historical meeting minutes documents for public viewing and cleaned up duplicate archive files."
+
+- date: "2026-09-19"
+  time: "04:44 PM"
+  commit: "chore: routine external link and file maintenance"
+  summary: "Updated external links across the site to open cleanly in new tabs and removed unused legacy files."
+
+- date: "2026-09-19"
+  time: "04:34 PM"
+  commit: "feat: update newsletter signup placement on homepage and footer"
+  summary: "Placed the club email newsletter signup form inside the Next Meeting box on the homepage and centered it in the footer on all other pages."
+
+- date: "2026-09-19"
+  time: "03:53 PM"
+  commit: "feat: integrate club newsletter signup form and developer documentation"
+  summary: "Added the club email newsletter subscription form and updated project documentation."
+
+- date: "2026-09-01"
+  time: "10:14 AM"
+  commit: "chore: update MMARC net script document and footer link"
+  summary: "Updated the weekly 2-meter Net Control Station script PDF and linked it in the site footer."
+
+- date: "2026-07-07"
+  time: "07:58 PM"
+  commit: "feat: add 2026 Field Day results post and interactive photo gallery"
+  summary: "Published the 2026 ARRL Field Day recap, scores, and an interactive click-to-enlarge photo gallery."
+
+- date: "2026-06-26"
+  time: "05:41 PM"
+  commit: "feat: add Field Day 2026 announcement post and event graphics"
+  summary: "Posted the 2026 Field Day schedule, setup times, and event announcement."
+
+- date: "2026-05-14"
+  time: "10:11 PM"
+  commit: "feat: update Morse code activity details and live repeater audio player"
+  summary: "Updated the Saturday Morse Code Class & Breakfast details and refined the live K0ETY repeater audio stream player."
+
+- date: "2026-05-14"
+  time: "09:55 PM"
+  commit: "feat: add Missouri Section Net (MON) details to resources list"
+  summary: "Added frequency and schedule information for the Missouri Section Net (MON) on the Resources page."
+
+- date: "2026-05-14"
+  time: "05:57 PM"
+  commit: "feat: redesign Members Area hub and add live repeater audio player"
+  summary: "Enhanced the Members Area landing page with a card layout and added a live online audio player for the K0ETY repeater."
+
+- date: "2026-05-14"
+  time: "11:11 AM"
+  commit: "refactor: update repeater descriptions and footer layout"
+  summary: "Refreshed repeater coverage descriptions and improved the layout of the site footer."
+
+- date: "2026-05-13"
+  time: "05:14 PM"
+  commit: "feat: add FCC Callsign Lookup tool and Why Join Us page"
+  summary: "Added the interactive FCC Callsign Lookup tool in the Members Area, created the 'Why Join Us?' page, and updated club repeater trustee details."
+
+- date: "2026-05-12"
+  time: "05:24 PM"
+  commit: "feat: add Linn repeater details and update Resources page"
+  summary: "Added the 145.390 MHz Linn repeater to the footer and updated local repeater and packet network listings on the Resources page."
+
+- date: "2026-05-12"
+  time: "03:36 PM"
+  commit: "feat: add Solar Weather page and Digital Historian archive search tool"
+  summary: "Added a live Solar & HF Propagation conditions page and launched the beta Digital Historian tool for searching past club minutes."
+
+- date: "2026-05-12"
+  time: "11:07 AM"
+  commit: "refactor: redesign Discover Radio (New Hams) guide with interactive sections"
+  summary: "Updated the 'Discover Radio' guide for new and prospective hams with expandable topic sections."
+
+- date: "2026-04-23"
+  time: "05:25 PM"
+  commit: "feat: add Net Control Station weekly net report tool"
+  summary: "Created the interactive Net Report tool in the Members Area with automatic callsign lookup and draft saving for Net Control Stations."
+
+- date: "2026-04-10"
+  time: "07:46 AM"
+  commit: "feat: add historical meeting minutes archive and Privacy Policy page"
+  summary: "Imported over two decades of club meeting minutes into a browsable archive by year and added the site Privacy Policy page."
+
+- date: "2026-04-09"
+  time: "02:02 PM"
+  commit: "feat: add RSS feed, SEO metadata, and Club Activities section"
+  summary: "Added an RSS feed for club news and organized recurring events under the Club Activities section."
+
+- date: "2026-04-08"
+  time: "08:49 PM"
+  commit: "feat: add interactive Club Calendar page and contact form integration"
+  summary: "Added the interactive Club Calendar page, enabled the online Contact Us form, and configured the custom k0ety.net domain."
+
+- date: "2026-04-01"
+  time: "01:46 PM"
+  commit: "feat: add Meshtastic article and mobile web app (PWA) support"
+  summary: "Published an article on Meshtastic off-grid radio communication and added mobile home-screen installation support."
+
+- date: "2026-03-31"
+  time: "05:17 PM"
+  commit: "feat: update About Us leadership roster, Partner with Us page, and next-meeting calculator"
+  summary: "Updated club officer and committee listings, expanded community outreach information, and added an automatic next-meeting date display on the homepage."
+
+- date: "2026-03-25"
+  time: "11:58 AM"
+  commit: "feat: revamp Resources page with area repeaters and regional nets"
+  summary: "Expanded the Resources page with comprehensive tables of Central Missouri repeaters and weekly nets."
+
+- date: "2026-02-13"
+  time: "04:57 PM"
+  commit: "feat: add Contact Us, History, and New Hams pages"
+  summary: "Added dedicated pages for Club History, New Hams, and Contact Us, along with a refreshed homepage layout."
+
+- date: "2026-02-12"
+  time: "02:32 PM"
+  commit: "feat: launch redesigned MMARC website with dark mode support"
+  summary: "Launched the modern Jekyll and Tailwind CSS website design for the Mid-MO Amateur Radio Club with light and dark mode themes."
+
+- date: "2025-10-31"
+  time: "12:25 PM"
+  commit: "chore: initial repository setup"
+  summary: "Created the initial GitHub Pages repository for the Mid-MO Amateur Radio Club website."

@@ -1,0 +1,37 @@
+---
+layout: default
+title: Website Change History
+permalink: /changelog/
+---
+
+<div class="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+            Website Change History
+        </h1>
+        <p class="mt-3 text-lg text-gray-600 dark:text-gray-400">
+            A log of updates, new features, and content additions to the K0ETY website.
+        </p>
+    </div>
+
+    <div class="space-y-6">
+        {% for entry in site.data.changelog %}
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-shadow hover:shadow-md">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-3 mb-3 border-b border-gray-100 dark:border-gray-700">
+                <span class="inline-flex items-center text-sm font-semibold text-brand-800 dark:text-blue-400">
+                    <svg class="w-4 h-4 mr-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {{ entry.date | date: "%B %-d, %Y" }} at {{ entry.time }}
+                </span>
+                <code class="text-xs font-mono bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded">
+                    {{ entry.commit | escape }}
+                </code>
+            </div>
+            <p class="text-gray-800 dark:text-gray-200 text-base leading-relaxed">
+                {{ entry.summary | escape }}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>

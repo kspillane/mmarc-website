@@ -183,6 +183,9 @@
         <div class="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8 text-center">
             <p class="text-base text-gray-400">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights
                 reserved.</p>
+            <p class="mt-2 text-sm text-gray-400">
+                Site last updated on <a href="{{ '/changelog/' | relative_url }}" class="underline hover:text-brand-800 dark:hover:text-brand-400">{{ site.data.changelog.first.date | default: site.time | date: '%B %-d, %Y' }}</a>
+            </p>
         </div>
     </div>
 </footer>

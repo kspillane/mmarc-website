@@ -31,6 +31,8 @@ This document serves as an operational guide for LLM coding agents and developer
 ```text
 mmarc-website/
 ├── _activities/           # Collection: Club activities & awards (e.g. Hammond Award)
+├── _data/
+│   └── changelog.yml      # Public website change history entries (date, time, sanitized commit, summary)
 ├── _includes/             # Reusable HTML partials
 │   ├── footer.html        # Site footer, repeater info, meeting times, social links
 │   ├── head.html          # HTML <head>, Tailwind config, Alpine.js, fonts, PWA registration
@@ -56,6 +58,7 @@ mmarc-website/
 ├── minutes/               # Historical minutes index & archive browser
 │   └── index.html         # Minutes index grouped by year/month
 ├── n0ss/                  # LEGACY MIRROR: Preserved archive of Tom Hammond (N0SS, SK)
+├── changelog.html         # Public Website Change History page (/changelog/)
 ├── _config.yml            # Main Jekyll configuration (collections, permalinks, plugins)
 ├── Gemfile                # Ruby gem dependencies
 ├── Gemfile.lock           # Locked gem versions
@@ -190,3 +193,9 @@ Configured in `_includes/head.html` via the Tailwind CDN configuration:
 5. **Front Matter Integrity**:
    - Ensure date formats adhere to ISO-8601 or Jekyll's standard date syntax (`YYYY-MM-DD` or `YYYY-MM-DD HH:MM:SS +/-TTTT`).
    - Validate that collections specified in `_config.yml` match the directory structure.
+
+6. **Public Website Change History (`_data/changelog.yml` & `changelog.html`) & Deployment**:
+   - Whenever committing changes to the repository, prepend a new entry at the top of `_data/changelog.yml` with `date` (`YYYY-MM-DD`), `time` (`HH:MM AM/PM`), a sanitized `commit` message, and a plain-English, non-technical `summary` for club members.
+   - **Security Guardrail**: Never include security vulnerabilities, PII details, internal server paths, or third-party proxy endpoints in public `_data/changelog.yml` entries or commit messages.
+   - **Meeting Minutes PII Policy**: Public meeting minutes in `_minutes/` and `assets/minutes/` may include member names, call signs, club mailing addresses, and public agency/venue addresses, but must NEVER contain personal email addresses, personal phone numbers, or personal residential addresses. Unedited original source minutes are archived outside the repository in `/root/minutes_raw_archive/`.
+   - **Commit & Push**: When the user asks to commit changes, always push (`git push origin main`) to deploy to GitHub Pages automatically.
