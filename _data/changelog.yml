@@ -1,3 +1,8 @@
+- date: "2026-11-13"
+  time: "02:20 PM"
+  commit: "feat: restore club By-Laws PDF, skip December in next-meeting calculator, and add Oct 2026 minutes"
+  summary: "Restored the club By-Laws PDF linked in the footer, updated the homepage next-meeting display to skip December for the Christmas Party and show the January meeting, and published the October 2026 meeting minutes."
+
 - date: "2026-11-02"
   time: "07:25 PM"
   commit: "chore: configure search engine crawler rules in robots.txt"

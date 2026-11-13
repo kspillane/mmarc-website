@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **October 2026 Meeting Minutes**: Imported the October 8, 2026 meeting minutes PDF ([`assets/minutes/2026_oct.pdf`](assets/minutes/2026_oct.pdf)) and Markdown archive page ([`_minutes/2026-10-01-minutes.md`](_minutes/2026-10-01-minutes.md)).
+- **MMARC By-Laws PDF**: Retrieved and restored [`assets/documents/MMARC_By-Laws_12-14-13.pdf`](assets/documents/MMARC_By-Laws_12-14-13.pdf) from the legacy URL referenced in git history to fix the 404 link in [`_includes/footer.html`](_includes/footer.html).
 - **Root `robots.txt` & Noindex Meta Tags**: Added [`robots.txt`](robots.txt) and conditional `noindex, nofollow` meta tags in [`_includes/head.html`](_includes/head.html) to prevent search engines from crawling or indexing `/members/`, `/minutes/`, and `/assets/minutes/`.
 - **Public Website Change History (`/changelog/`) & Footer Update Link**: Added [`_data/changelog.yml`](_data/changelog.yml) and [`changelog.html`](changelog.html) displaying a sanitized, plain-English change history of the site, linked via `"Site last updated on [DATE]"` below the copyright notice in [`_includes/footer.html`](_includes/footer.html).
 - **2026 Meeting Minutes (Jan, Jul, Aug, Sep)**: Imported and verified the official January, July, August, and September 2026 meeting minutes PDFs (`assets/minutes/2026_*.pdf`) and Markdown archive pages (`_minutes/2026-*-minutes.md`), replacing the January 2026 placeholder stub.
@@ -14,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **AGENTS.md**: Created an LLM agent operations and developer guide detailing repository architecture, Jekyll framework setup, directory structure, styling guidelines, and development guardrails.
 
 ### Changed
+- **Next Meeting Date Calculator (`index.md`)**: Updated `getNextSecondThursday` in [`index.md`](index.md) to skip December (since the December meeting is the club Christmas Party and not open to the public) and advance directly to the January meeting.
 - **Newsletter Signup Placement**: Replaced the Weekly Net section in the Next Event card on the main homepage ([`index.md`](index.md)) with the EmailOctopus signup form. On all other pages, placed the signup form in the footer ([`_includes/footer.html`](_includes/footer.html)) centered on its own row below the navigation links and above the copyright notice using a Jekyll Liquid condition (`{% unless page.url == '/' or page.url == '/index.html' %}`).
 
 ### Fixed

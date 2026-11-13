@@ -189,6 +189,12 @@ title: Home
         function getNextSecondThursday(date) {
             let year = date.getFullYear();
             let month = date.getMonth();
+
+            // December meeting is the club Christmas Party (not open to the public), so skip to January
+            if (month === 11) {
+                return getNextSecondThursday(new Date(year + 1, 0, 1));
+            }
+
             let d = new Date(year, month, 1);
             let dayOfWeek = d.getDay();
             
